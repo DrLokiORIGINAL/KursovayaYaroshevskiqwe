@@ -1,0 +1,87 @@
+﻿<Window x:Class="KursovayaYaroshevski.WindowFolder.ManagerFolder.ManagerPFolder.ManagerPWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:KursovayaYaroshevski.WindowFolder.ManagerFolder.ManagerPFolder"
+        mc:Ignorable="d"
+        Title="ManagerPWindow" 
+        Height="800"
+        MaxHeight="800"
+        MinHeight="800"
+        Width="1200"
+        MaxWidth="1200"
+        MinWidth="1200"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip"
+        Background="Transparent"
+        Icon="/ResourceFolder/ImageFolder/Icon.png">
+    <Border>
+
+        <Border.Background>
+            <ImageBrush ImageSource="/ResourceFolder/ImageFolder/MainWindow.png"/>
+        </Border.Background>
+
+        <Grid>
+
+            <Border VerticalAlignment="Top"
+                    Height="55"
+                    Background="Transparent"
+                    MouseDown="Border_MouseDown">
+
+                <Image  x:Name="Close"
+                    Style="{DynamicResource imgClose}"
+                Source="/ResourceFolder/ImageFolder/Close.png" 
+                    Margin="0,20,20,0"
+                    MouseLeftButtonDown="Close_MouseLeftButtonDown" Width="30"/>
+
+            </Border>
+
+            <Label Style="{StaticResource LabelLogoStyle}"
+                   Content="Меню сотрудника Павелецкая" 
+                   Margin="450,0,250,730"
+                   BorderBrush="Transparent"/>
+
+            <Button x:Name="ListStaffBtn"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="15,236,1045,519"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content="Список&#xD;&#xA;сотрудников" 
+                    Click="ListStaffBtn_Click"
+                    FontFamily="Cascadia Code SemiLight"
+                    Foreground="White"
+                    Height="45"/>
+
+            <Image x:Name="AddStaffBtn"
+                   Style="{DynamicResource imgClose}"
+                    Source="/ResourceFolder/ImageFolder/Plus.png"
+                   MouseLeftButtonDown="AddStaffBtn_MouseLeftButtonDown"
+                   Height="30"
+                   Width="30 " 
+                   Margin="0,244,1008,0"/>
+
+            <Button x:Name="ListHelperBtn"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="15,286,1045,469"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content="Список&#xD;&#xA;помощников" 
+                    Click="ListHelperBtn_Click"
+                    FontFamily="Cascadia Code SemiLight"
+                    Foreground="White"
+                    Height="45"/>
+
+            <Image x:Name="AddHelperBtn"
+                   Style="{DynamicResource imgClose}"
+                    Source="/ResourceFolder/ImageFolder/Plus.png"
+                   MouseLeftButtonDown="AddHelperBtn_MouseLeftButtonDown"
+                   Height="30"
+                   Width="30 " 
+                   Margin="0,294,1008,0"/>
+        </Grid>
+    </Border>
+</Window>

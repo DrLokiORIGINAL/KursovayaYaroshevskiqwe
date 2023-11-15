@@ -1,0 +1,228 @@
+﻿<Window x:Class="KursovayaYaroshevski.WindowFolder.DirectorFolder.DirectorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:KursovayaYaroshevski.WindowFolder.DirectorFolder"
+        mc:Ignorable="d"
+        Title="DirectorWindow" 
+        Height="800"
+        MaxHeight="800"
+        MinHeight="800"
+        Width="1200"
+        MaxWidth="1200"
+        MinWidth="1200"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip"
+        Background="Transparent"
+        Icon="/ResourceFolder/ImageFolder/Icon.png">
+    <Border>
+
+        <Border.Background>
+            <ImageBrush ImageSource="/ResourceFolder/ImageFolder/MainWindow.png"/>
+        </Border.Background>
+
+        <Grid>
+
+            <Border VerticalAlignment="Top"
+                    Height="55"
+                    Background="Transparent"
+                    MouseDown="Border_MouseDown">
+
+                <Image  x:Name="Close"
+                    Style="{DynamicResource imgClose}"
+                Source="/ResourceFolder/ImageFolder/Close.png" 
+                    Margin="0,20,20,0"
+                    MouseLeftButtonDown="Close_MouseLeftButtonDown" Width="30"/>
+
+            </Border>
+
+            <Label Style="{StaticResource LabelLogoStyle}"
+                   Content="Меню директора" 
+                   Margin="575,0,375,730"
+                   BorderBrush="Transparent"/>
+            <Label Style="{DynamicResource LabelNormalStyle}"
+                           Content="{Binding ElementName=MainFrame,
+                        Path=Content.Title}" 
+                   Margin="264,161,64,91"/>
+
+            <Frame Name="MaiFrame" 
+                   Margin="264,161,64,91"
+                           NavigationUIVisibility="Hidden"/>
+
+            <Button x:Name="ListAdministratorNBtn"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="14,272,1046,483"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content="Список&#xD;&#xA;позиций Н" 
+                    Click="ListAdministratorNBtn_Click"
+                    FontFamily="Cascadia Code SemiLight"
+                    Foreground="White"
+                    Height="45"/>
+
+            <Image x:Name="AddAdministratorNBtn"
+                   Style="{DynamicResource imgClose}"
+                    Source="/ResourceFolder/ImageFolder/Plus.png"
+                   MouseLeftButtonDown="AddAdministratorNBtn_MouseLeftButtonDown"
+                   Height="30"
+                   Width="30 " 
+                   Margin="0,280,1009,0"/>
+
+            <Button x:Name="ListAdministratorPBtn"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="14,322,1046,433"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content="Список&#xD;&#xA;позиций П" 
+                    Click="ListAdministratorPBtn_Click"
+                    FontFamily="Cascadia Code SemiLight"
+                    Foreground="White"
+                    Height="45"/>
+
+            <Image x:Name="AddAdministratorPBtn"
+                   Style="{DynamicResource imgClose}"
+                    Source="/ResourceFolder/ImageFolder/Plus.png"
+                   MouseLeftButtonDown="AddAdministratorPBtn_MouseLeftButtonDown"
+                   Height="30"
+                   Width="30 " 
+                   Margin="0,330,1009,0"/>
+
+            <Button x:Name="ListAdministratorSBtn"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="14,372,1046,383"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content="Список&#xD;&#xA;позиций С" 
+                    Click="ListAdministratorSBtn_Click"
+                    FontFamily="Cascadia Code SemiLight"
+                    Foreground="White"
+                    Height="45"/>
+
+            <Image x:Name="AddAdministratorSBtn"
+                   Style="{DynamicResource imgClose}"
+                    Source="/ResourceFolder/ImageFolder/Plus.png"
+                   MouseLeftButtonDown="AddAdministratorSBtn_MouseLeftButtonDown"
+                   Height="30"
+                   Width="30 " 
+                   Margin="0,380,1009,0"/>
+
+            <Button x:Name="ListLogistNBtn"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="14,422,1046,333"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content="Список&#xD;&#xA;сессий Н" 
+                    Click="ListLogistNBtn_Click"
+                    FontFamily="Cascadia Code SemiLight"
+                    Foreground="White"
+                    Height="45"/>
+
+            <Image x:Name="AddLogistNBtn"
+                   Style="{DynamicResource imgClose}"
+                    Source="/ResourceFolder/ImageFolder/Plus.png"
+                   MouseLeftButtonDown="AddLogistNBtn_MouseLeftButtonDown"
+                   Height="30"
+                   Width="30 " 
+                   Margin="0,429,1009,0"/>
+
+            <Button x:Name="ListLogistPBtn"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="14,472,1046,283"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content="Список&#xD;&#xA;сессий П" 
+                    Click="ListAdministratorPBtn_Click"
+                    FontFamily="Cascadia Code SemiLight"
+                    Foreground="White"
+                    Height="45"/>
+
+            <Image x:Name="AddLogistPBtn"
+                   Style="{DynamicResource imgClose}"
+                    Source="/ResourceFolder/ImageFolder/Plus.png"
+                   MouseLeftButtonDown="AddLogistPBtn_MouseLeftButtonDown"
+                   Height="30"
+                   Width="30 " 
+                   Margin="0,479,1009,0"/>
+
+            <Button x:Name="ListLogistSBtn"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="14,522,1046,233"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content="Список&#xD;&#xA;сессий С" 
+                    Click="ListLogistSBtn_Click"
+                    FontFamily="Cascadia Code SemiLight"
+                    Foreground="White"
+                    Height="45"/>
+
+            <Image x:Name="AddLogistSBtn"
+                   Style="{DynamicResource imgClose}"
+                    Source="/ResourceFolder/ImageFolder/Plus.png"
+                   MouseLeftButtonDown="AddLogistSBtn_MouseLeftButtonDown"
+                   Height="30"
+                   Width="30 " 
+                   Margin="0,529,1009,0"/>
+
+            <Button x:Name="ListManagerNBtn"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="14,572,1046,183"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content="Список&#xD;&#xA;сотрудников Н" 
+                    Click="ListManagerNBtn_Click"
+                    FontFamily="Cascadia Code SemiLight"
+                    Foreground="White"
+                    Height="45"/>
+
+            <Image x:Name="AddManagerNBtn"
+                   Style="{DynamicResource imgClose}"
+                    Source="/ResourceFolder/ImageFolder/Plus.png"
+                   MouseLeftButtonDown="AddManagerNBtn_MouseLeftButtonDown"
+                   Height="30"
+                   Width="30 " 
+                   Margin="0,579,1009,0"/>
+
+            <Button x:Name="ListManagerPBtn"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="14,622,1046,133"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content="Список&#xD;&#xA;струдников П" 
+                    Click="ListManagerPBtn_Click"
+                    FontFamily="Cascadia Code SemiLight"
+                    Foreground="White"
+                    Height="45"/>
+
+            <Image x:Name="AddManagerPBtn"
+                   Style="{DynamicResource imgClose}"
+                    Source="/ResourceFolder/ImageFolder/Plus.png"
+                   MouseLeftButtonDown="AddManagerPBtn_MouseLeftButtonDown"
+                   Height="30"
+                   Width="30 " 
+                   Margin="0,629,1009,0"/>
+
+            <Button x:Name="ListManagerSBtn"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="14,672,1046,83"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content="Список&#xD;&#xA;струдников С" 
+                    Click="ListManagerSBtn_Click"
+                    FontFamily="Cascadia Code SemiLight"
+                    Foreground="White"
+                    Height="45"/>
+
+            <Image x:Name="AddManagerSBtn"
+                   Style="{DynamicResource imgClose}"
+                    Source="/ResourceFolder/ImageFolder/Plus.png"
+                   MouseLeftButtonDown="AddManagerSBtn_MouseLeftButtonDown"
+                   Height="30"
+                   Width="30 " 
+                   Margin="0,679,1009,0"/>
+        </Grid>
+    </Border>
+</Window>

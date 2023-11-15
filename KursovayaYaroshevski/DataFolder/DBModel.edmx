@@ -1,0 +1,1187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище DBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cleaning">
+          <Key>
+            <PropertyRef Name="IdCleaning" />
+          </Key>
+          <Property Name="IdCleaning" Type="int" Nullable="false" />
+          <Property Name="NameCleaning" Type="nvarchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HelperNovokuznetskaya">
+          <Key>
+            <PropertyRef Name="IdHelperNovokuznetskaya" />
+          </Key>
+          <Property Name="IdHelperNovokuznetskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FLMHelperNovokuznetskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumberPhoneHelperNovokuznetskaya" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="EmailHelperNovokuznetskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PositionHelperNovokuznetskaya" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HelperPaveletskaya">
+          <Key>
+            <PropertyRef Name="IdHelperPaveletskaya" />
+          </Key>
+          <Property Name="IdHelperPaveletskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FLMHelperPaveletskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumberPhoneHelperPaveletskaya" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="EmailHelperPaveletskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PositionHelperPaveletskaya" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HelperSmolenskaya">
+          <Key>
+            <PropertyRef Name="IdHelperSmolenskaya" />
+          </Key>
+          <Property Name="IdHelperSmolenskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FLMHelperSmolenskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumberPhoneHelperSmolenskaya" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="EmailHelperSmolenskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PositionHelperSmolenskaya" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Novokuznetskaya">
+          <Key>
+            <PropertyRef Name="IdNovokuznetskaya" />
+          </Key>
+          <Property Name="IdNovokuznetskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdStaffNovokuznetskaya" Type="int" Nullable="false" />
+          <Property Name="IdHelperNovokuznetskaya" Type="int" Nullable="false" />
+          <Property Name="IdSessionNovokuznetskaya" Type="int" Nullable="false" />
+          <Property Name="NumberOfNachosNovokuznetskaya" Type="int" Nullable="false" />
+          <Property Name="NumberOfCrispsNovokuznetskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfColaNovokuznetskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfFantaNovokuznetskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfSweetPopcornNovokuznetskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfSaltedPopcornNovokuznetskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfCaramelPopcornNovokuznetskaya" Type="int" Nullable="false" />
+          <Property Name="IdCleaning" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Paveletskaya">
+          <Key>
+            <PropertyRef Name="IdPaveletskaya" />
+          </Key>
+          <Property Name="IdPaveletskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdStaffPaveletskaya" Type="int" Nullable="false" />
+          <Property Name="IdHelperPaveletskaya" Type="int" Nullable="false" />
+          <Property Name="IdSessionPaveletskaya" Type="int" Nullable="false" />
+          <Property Name="NumberOfNachosPaveletskaya" Type="int" Nullable="false" />
+          <Property Name="NumberOfCrispsPaveletskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfColaPaveletskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfFantaPaveletskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfSweetPopcornPaveletskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfSaltedPopcornPaveletskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfCaramelPopcornPaveletskaya" Type="int" Nullable="false" />
+          <Property Name="IdCleaning" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="IdRole" />
+          </Key>
+          <Property Name="IdRole" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameRole" Type="nvarchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SessionNovokuznetskaya">
+          <Key>
+            <PropertyRef Name="IdSessionNovokuznetskaya" />
+          </Key>
+          <Property Name="IdSessionNovokuznetskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameSessionNovokuznetskaya" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="ARSeissionNovokuznetskaya" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="TimeSessionNovokuznetskaya" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ImageSessionNovokuznetskaya" Type="varbinary(max)" Nullable="false" />
+          <Property Name="DateSessionNovokuznetskaya" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SessionPaveletskaya">
+          <Key>
+            <PropertyRef Name="IdSessionPaveletskaya" />
+          </Key>
+          <Property Name="IdSessionPaveletskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameSessionPaveletskaya" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="ARSeissionPaveletskaya" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="TimeSessionPaveletskaya" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ImageSessionPaveletskaya" Type="varbinary(max)" Nullable="false" />
+          <Property Name="DateSession" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SessionSmolenskaya">
+          <Key>
+            <PropertyRef Name="IdSessionSmolenskaya" />
+          </Key>
+          <Property Name="IdSessionSmolenskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameSessionSmolenskaya" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="ARSeissionSmolenskaya" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="TimeSessionSmolenskaya" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ImageSessionSmolenskaya" Type="varbinary(max)" Nullable="false" />
+          <Property Name="DateSessionSmolenskaya" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Smolenskaya">
+          <Key>
+            <PropertyRef Name="IdSmolenskaya" />
+          </Key>
+          <Property Name="IdSmolenskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdStaffSmolenskaya" Type="int" Nullable="false" />
+          <Property Name="IdSessionSmolenskaya" Type="int" Nullable="false" />
+          <Property Name="IdHelperSmolenskaya" Type="int" Nullable="false" />
+          <Property Name="NumberOfNachosSmolenskaya" Type="int" Nullable="false" />
+          <Property Name="NumberOfCrispsSmolenskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfColaSmolenskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfFantaSmolenskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfSweetPopcornSmolenskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfSaltedPopcornSmolenskaya" Type="int" Nullable="false" />
+          <Property Name="AmountOfCaramelPopcornSmolenskaya" Type="int" Nullable="false" />
+          <Property Name="IdCleaning" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StaffNovokuznetskaya">
+          <Key>
+            <PropertyRef Name="IdStaffNovokuznetskaya" />
+          </Key>
+          <Property Name="IdStaffNovokuznetskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FLMStaffNovokuznetskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumberPhoneStaffNovokuznetskaya" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="EmailStaffNovokuznetskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PositionStaffNovokuznetskaya" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StaffPaveletskaya">
+          <Key>
+            <PropertyRef Name="IdStaffPaveletskaya" />
+          </Key>
+          <Property Name="IdStaffPaveletskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FLMStaffPaveletskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumberPhoneStaffPaveletskaya" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="EmailStaffPaveletskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PositionStaffPaveletskaya" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StaffSmolenskaya">
+          <Key>
+            <PropertyRef Name="IdStaffSmolenskaya" />
+          </Key>
+          <Property Name="IdStaffSmolenskaya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FLMStaffSmolenskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumberPhoneStaffSmolenskaya" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="EmailStaffSmolenskaya" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PositionStaffSmolenskaya" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TitleStaff">
+          <Key>
+            <PropertyRef Name="IdTittleStaff" />
+          </Key>
+          <Property Name="IdTittleStaff" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameTittleStaff" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="IdUser" />
+          </Key>
+          <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LoginUser" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PasswordUser" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdRole" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Novokuznetskaya_Cleaning">
+          <End Role="Cleaning" Type="Self.Cleaning" Multiplicity="1" />
+          <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cleaning">
+              <PropertyRef Name="IdCleaning" />
+            </Principal>
+            <Dependent Role="Novokuznetskaya">
+              <PropertyRef Name="IdCleaning" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Novokuznetskaya_HelperNovokuznetskaya">
+          <End Role="HelperNovokuznetskaya" Type="Self.HelperNovokuznetskaya" Multiplicity="1" />
+          <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HelperNovokuznetskaya">
+              <PropertyRef Name="IdHelperNovokuznetskaya" />
+            </Principal>
+            <Dependent Role="Novokuznetskaya">
+              <PropertyRef Name="IdSessionNovokuznetskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Novokuznetskaya_SessionNovokuznetskaya">
+          <End Role="SessionNovokuznetskaya" Type="Self.SessionNovokuznetskaya" Multiplicity="1" />
+          <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SessionNovokuznetskaya">
+              <PropertyRef Name="IdSessionNovokuznetskaya" />
+            </Principal>
+            <Dependent Role="Novokuznetskaya">
+              <PropertyRef Name="IdHelperNovokuznetskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Novokuznetskaya_StaffNovokuznetskaya">
+          <End Role="StaffNovokuznetskaya" Type="Self.StaffNovokuznetskaya" Multiplicity="1" />
+          <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StaffNovokuznetskaya">
+              <PropertyRef Name="IdStaffNovokuznetskaya" />
+            </Principal>
+            <Dependent Role="Novokuznetskaya">
+              <PropertyRef Name="IdStaffNovokuznetskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Paveletskaya_Cleaning">
+          <End Role="Cleaning" Type="Self.Cleaning" Multiplicity="1" />
+          <End Role="Paveletskaya" Type="Self.Paveletskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cleaning">
+              <PropertyRef Name="IdCleaning" />
+            </Principal>
+            <Dependent Role="Paveletskaya">
+              <PropertyRef Name="IdCleaning" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Paveletskaya_HelperPaveletskaya">
+          <End Role="HelperPaveletskaya" Type="Self.HelperPaveletskaya" Multiplicity="1" />
+          <End Role="Paveletskaya" Type="Self.Paveletskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HelperPaveletskaya">
+              <PropertyRef Name="IdHelperPaveletskaya" />
+            </Principal>
+            <Dependent Role="Paveletskaya">
+              <PropertyRef Name="IdSessionPaveletskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Paveletskaya_SessionPaveletskaya">
+          <End Role="SessionPaveletskaya" Type="Self.SessionPaveletskaya" Multiplicity="1" />
+          <End Role="Paveletskaya" Type="Self.Paveletskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SessionPaveletskaya">
+              <PropertyRef Name="IdSessionPaveletskaya" />
+            </Principal>
+            <Dependent Role="Paveletskaya">
+              <PropertyRef Name="IdHelperPaveletskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Paveletskaya_StaffPaveletskaya">
+          <End Role="StaffPaveletskaya" Type="Self.StaffPaveletskaya" Multiplicity="1" />
+          <End Role="Paveletskaya" Type="Self.Paveletskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StaffPaveletskaya">
+              <PropertyRef Name="IdStaffPaveletskaya" />
+            </Principal>
+            <Dependent Role="Paveletskaya">
+              <PropertyRef Name="IdStaffPaveletskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Smolenskaya_Cleaning">
+          <End Role="Cleaning" Type="Self.Cleaning" Multiplicity="1" />
+          <End Role="Smolenskaya" Type="Self.Smolenskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cleaning">
+              <PropertyRef Name="IdCleaning" />
+            </Principal>
+            <Dependent Role="Smolenskaya">
+              <PropertyRef Name="IdCleaning" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Smolenskaya_HelperSmolenskaya">
+          <End Role="HelperSmolenskaya" Type="Self.HelperSmolenskaya" Multiplicity="1" />
+          <End Role="Smolenskaya" Type="Self.Smolenskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HelperSmolenskaya">
+              <PropertyRef Name="IdHelperSmolenskaya" />
+            </Principal>
+            <Dependent Role="Smolenskaya">
+              <PropertyRef Name="IdHelperSmolenskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Smolenskaya_SessionSmolenskaya">
+          <End Role="SessionSmolenskaya" Type="Self.SessionSmolenskaya" Multiplicity="1" />
+          <End Role="Smolenskaya" Type="Self.Smolenskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SessionSmolenskaya">
+              <PropertyRef Name="IdSessionSmolenskaya" />
+            </Principal>
+            <Dependent Role="Smolenskaya">
+              <PropertyRef Name="IdSessionSmolenskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Smolenskaya_StaffSmolenskaya">
+          <End Role="StaffSmolenskaya" Type="Self.StaffSmolenskaya" Multiplicity="1" />
+          <End Role="Smolenskaya" Type="Self.Smolenskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StaffSmolenskaya">
+              <PropertyRef Name="IdStaffSmolenskaya" />
+            </Principal>
+            <Dependent Role="Smolenskaya">
+              <PropertyRef Name="IdStaffSmolenskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="IdRole" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="IdRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="Хранилище DBModelContainer">
+          <EntitySet Name="Cleaning" EntityType="Self.Cleaning" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HelperNovokuznetskaya" EntityType="Self.HelperNovokuznetskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HelperPaveletskaya" EntityType="Self.HelperPaveletskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HelperSmolenskaya" EntityType="Self.HelperSmolenskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Novokuznetskaya" EntityType="Self.Novokuznetskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Paveletskaya" EntityType="Self.Paveletskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SessionNovokuznetskaya" EntityType="Self.SessionNovokuznetskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SessionPaveletskaya" EntityType="Self.SessionPaveletskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SessionSmolenskaya" EntityType="Self.SessionSmolenskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Smolenskaya" EntityType="Self.Smolenskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StaffNovokuznetskaya" EntityType="Self.StaffNovokuznetskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StaffPaveletskaya" EntityType="Self.StaffPaveletskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StaffSmolenskaya" EntityType="Self.StaffSmolenskaya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TitleStaff" EntityType="Self.TitleStaff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Novokuznetskaya_Cleaning" Association="Self.FK_Novokuznetskaya_Cleaning">
+            <End Role="Cleaning" EntitySet="Cleaning" />
+            <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Novokuznetskaya_HelperNovokuznetskaya" Association="Self.FK_Novokuznetskaya_HelperNovokuznetskaya">
+            <End Role="HelperNovokuznetskaya" EntitySet="HelperNovokuznetskaya" />
+            <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Novokuznetskaya_SessionNovokuznetskaya" Association="Self.FK_Novokuznetskaya_SessionNovokuznetskaya">
+            <End Role="SessionNovokuznetskaya" EntitySet="SessionNovokuznetskaya" />
+            <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Novokuznetskaya_StaffNovokuznetskaya" Association="Self.FK_Novokuznetskaya_StaffNovokuznetskaya">
+            <End Role="StaffNovokuznetskaya" EntitySet="StaffNovokuznetskaya" />
+            <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Paveletskaya_Cleaning" Association="Self.FK_Paveletskaya_Cleaning">
+            <End Role="Cleaning" EntitySet="Cleaning" />
+            <End Role="Paveletskaya" EntitySet="Paveletskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Paveletskaya_HelperPaveletskaya" Association="Self.FK_Paveletskaya_HelperPaveletskaya">
+            <End Role="HelperPaveletskaya" EntitySet="HelperPaveletskaya" />
+            <End Role="Paveletskaya" EntitySet="Paveletskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Paveletskaya_SessionPaveletskaya" Association="Self.FK_Paveletskaya_SessionPaveletskaya">
+            <End Role="SessionPaveletskaya" EntitySet="SessionPaveletskaya" />
+            <End Role="Paveletskaya" EntitySet="Paveletskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Paveletskaya_StaffPaveletskaya" Association="Self.FK_Paveletskaya_StaffPaveletskaya">
+            <End Role="StaffPaveletskaya" EntitySet="StaffPaveletskaya" />
+            <End Role="Paveletskaya" EntitySet="Paveletskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Smolenskaya_Cleaning" Association="Self.FK_Smolenskaya_Cleaning">
+            <End Role="Cleaning" EntitySet="Cleaning" />
+            <End Role="Smolenskaya" EntitySet="Smolenskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Smolenskaya_HelperSmolenskaya" Association="Self.FK_Smolenskaya_HelperSmolenskaya">
+            <End Role="HelperSmolenskaya" EntitySet="HelperSmolenskaya" />
+            <End Role="Smolenskaya" EntitySet="Smolenskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Smolenskaya_SessionSmolenskaya" Association="Self.FK_Smolenskaya_SessionSmolenskaya">
+            <End Role="SessionSmolenskaya" EntitySet="SessionSmolenskaya" />
+            <End Role="Smolenskaya" EntitySet="Smolenskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Smolenskaya_StaffSmolenskaya" Association="Self.FK_Smolenskaya_StaffSmolenskaya">
+            <End Role="StaffSmolenskaya" EntitySet="StaffSmolenskaya" />
+            <End Role="Smolenskaya" EntitySet="Smolenskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Cleaning">
+          <Key>
+            <PropertyRef Name="IdCleaning" />
+          </Key>
+          <Property Name="IdCleaning" Type="Int32" Nullable="false" />
+          <Property Name="NameCleaning" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_Cleaning" FromRole="Cleaning" ToRole="Novokuznetskaya" />
+          <NavigationProperty Name="Paveletskaya" Relationship="Self.FK_Paveletskaya_Cleaning" FromRole="Cleaning" ToRole="Paveletskaya" />
+          <NavigationProperty Name="Smolenskaya" Relationship="Self.FK_Smolenskaya_Cleaning" FromRole="Cleaning" ToRole="Smolenskaya" />
+        </EntityType>
+        <EntityType Name="HelperNovokuznetskaya">
+          <Key>
+            <PropertyRef Name="IdHelperNovokuznetskaya" />
+          </Key>
+          <Property Name="IdHelperNovokuznetskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FLMHelperNovokuznetskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumberPhoneHelperNovokuznetskaya" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmailHelperNovokuznetskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PositionHelperNovokuznetskaya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_HelperNovokuznetskaya" FromRole="HelperNovokuznetskaya" ToRole="Novokuznetskaya" />
+        </EntityType>
+        <EntityType Name="HelperPaveletskaya">
+          <Key>
+            <PropertyRef Name="IdHelperPaveletskaya" />
+          </Key>
+          <Property Name="IdHelperPaveletskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FLMHelperPaveletskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumberPhoneHelperPaveletskaya" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmailHelperPaveletskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PositionHelperPaveletskaya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Paveletskaya" Relationship="Self.FK_Paveletskaya_HelperPaveletskaya" FromRole="HelperPaveletskaya" ToRole="Paveletskaya" />
+        </EntityType>
+        <EntityType Name="HelperSmolenskaya">
+          <Key>
+            <PropertyRef Name="IdHelperSmolenskaya" />
+          </Key>
+          <Property Name="IdHelperSmolenskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FLMHelperSmolenskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumberPhoneHelperSmolenskaya" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmailHelperSmolenskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PositionHelperSmolenskaya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Smolenskaya" Relationship="Self.FK_Smolenskaya_HelperSmolenskaya" FromRole="HelperSmolenskaya" ToRole="Smolenskaya" />
+        </EntityType>
+        <EntityType Name="Novokuznetskaya">
+          <Key>
+            <PropertyRef Name="IdNovokuznetskaya" />
+          </Key>
+          <Property Name="IdNovokuznetskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdStaffNovokuznetskaya" Type="Int32" Nullable="false" />
+          <Property Name="IdHelperNovokuznetskaya" Type="Int32" Nullable="false" />
+          <Property Name="IdSessionNovokuznetskaya" Type="Int32" Nullable="false" />
+          <Property Name="NumberOfNachosNovokuznetskaya" Type="Int32" Nullable="false" />
+          <Property Name="NumberOfCrispsNovokuznetskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfColaNovokuznetskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfFantaNovokuznetskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfSweetPopcornNovokuznetskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfSaltedPopcornNovokuznetskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfCaramelPopcornNovokuznetskaya" Type="Int32" Nullable="false" />
+          <Property Name="IdCleaning" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cleaning" Relationship="Self.FK_Novokuznetskaya_Cleaning" FromRole="Novokuznetskaya" ToRole="Cleaning" />
+          <NavigationProperty Name="HelperNovokuznetskaya" Relationship="Self.FK_Novokuznetskaya_HelperNovokuznetskaya" FromRole="Novokuznetskaya" ToRole="HelperNovokuznetskaya" />
+          <NavigationProperty Name="SessionNovokuznetskaya" Relationship="Self.FK_Novokuznetskaya_SessionNovokuznetskaya" FromRole="Novokuznetskaya" ToRole="SessionNovokuznetskaya" />
+          <NavigationProperty Name="StaffNovokuznetskaya" Relationship="Self.FK_Novokuznetskaya_StaffNovokuznetskaya" FromRole="Novokuznetskaya" ToRole="StaffNovokuznetskaya" />
+        </EntityType>
+        <EntityType Name="Paveletskaya">
+          <Key>
+            <PropertyRef Name="IdPaveletskaya" />
+          </Key>
+          <Property Name="IdPaveletskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdStaffPaveletskaya" Type="Int32" Nullable="false" />
+          <Property Name="IdHelperPaveletskaya" Type="Int32" Nullable="false" />
+          <Property Name="IdSessionPaveletskaya" Type="Int32" Nullable="false" />
+          <Property Name="NumberOfNachosPaveletskaya" Type="Int32" Nullable="false" />
+          <Property Name="NumberOfCrispsPaveletskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfColaPaveletskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfFantaPaveletskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfSweetPopcornPaveletskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfSaltedPopcornPaveletskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfCaramelPopcornPaveletskaya" Type="Int32" Nullable="false" />
+          <Property Name="IdCleaning" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cleaning" Relationship="Self.FK_Paveletskaya_Cleaning" FromRole="Paveletskaya" ToRole="Cleaning" />
+          <NavigationProperty Name="HelperPaveletskaya" Relationship="Self.FK_Paveletskaya_HelperPaveletskaya" FromRole="Paveletskaya" ToRole="HelperPaveletskaya" />
+          <NavigationProperty Name="SessionPaveletskaya" Relationship="Self.FK_Paveletskaya_SessionPaveletskaya" FromRole="Paveletskaya" ToRole="SessionPaveletskaya" />
+          <NavigationProperty Name="StaffPaveletskaya" Relationship="Self.FK_Paveletskaya_StaffPaveletskaya" FromRole="Paveletskaya" ToRole="StaffPaveletskaya" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="IdRole" />
+          </Key>
+          <Property Name="IdRole" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameRole" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
+        </EntityType>
+        <EntityType Name="SessionNovokuznetskaya">
+          <Key>
+            <PropertyRef Name="IdSessionNovokuznetskaya" />
+          </Key>
+          <Property Name="IdSessionNovokuznetskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameSessionNovokuznetskaya" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ARSeissionNovokuznetskaya" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TimeSessionNovokuznetskaya" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ImageSessionNovokuznetskaya" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="DateSessionNovokuznetskaya" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_SessionNovokuznetskaya" FromRole="SessionNovokuznetskaya" ToRole="Novokuznetskaya" />
+        </EntityType>
+        <EntityType Name="SessionPaveletskaya">
+          <Key>
+            <PropertyRef Name="IdSessionPaveletskaya" />
+          </Key>
+          <Property Name="IdSessionPaveletskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameSessionPaveletskaya" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ARSeissionPaveletskaya" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TimeSessionPaveletskaya" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ImageSessionPaveletskaya" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="DateSession" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Paveletskaya" Relationship="Self.FK_Paveletskaya_SessionPaveletskaya" FromRole="SessionPaveletskaya" ToRole="Paveletskaya" />
+        </EntityType>
+        <EntityType Name="SessionSmolenskaya">
+          <Key>
+            <PropertyRef Name="IdSessionSmolenskaya" />
+          </Key>
+          <Property Name="IdSessionSmolenskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameSessionSmolenskaya" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ARSeissionSmolenskaya" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TimeSessionSmolenskaya" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ImageSessionSmolenskaya" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="DateSessionSmolenskaya" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Smolenskaya" Relationship="Self.FK_Smolenskaya_SessionSmolenskaya" FromRole="SessionSmolenskaya" ToRole="Smolenskaya" />
+        </EntityType>
+        <EntityType Name="Smolenskaya">
+          <Key>
+            <PropertyRef Name="IdSmolenskaya" />
+          </Key>
+          <Property Name="IdSmolenskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdStaffSmolenskaya" Type="Int32" Nullable="false" />
+          <Property Name="IdSessionSmolenskaya" Type="Int32" Nullable="false" />
+          <Property Name="IdHelperSmolenskaya" Type="Int32" Nullable="false" />
+          <Property Name="NumberOfNachosSmolenskaya" Type="Int32" Nullable="false" />
+          <Property Name="NumberOfCrispsSmolenskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfColaSmolenskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfFantaSmolenskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfSweetPopcornSmolenskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfSaltedPopcornSmolenskaya" Type="Int32" Nullable="false" />
+          <Property Name="AmountOfCaramelPopcornSmolenskaya" Type="Int32" Nullable="false" />
+          <Property Name="IdCleaning" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cleaning" Relationship="Self.FK_Smolenskaya_Cleaning" FromRole="Smolenskaya" ToRole="Cleaning" />
+          <NavigationProperty Name="HelperSmolenskaya" Relationship="Self.FK_Smolenskaya_HelperSmolenskaya" FromRole="Smolenskaya" ToRole="HelperSmolenskaya" />
+          <NavigationProperty Name="SessionSmolenskaya" Relationship="Self.FK_Smolenskaya_SessionSmolenskaya" FromRole="Smolenskaya" ToRole="SessionSmolenskaya" />
+          <NavigationProperty Name="StaffSmolenskaya" Relationship="Self.FK_Smolenskaya_StaffSmolenskaya" FromRole="Smolenskaya" ToRole="StaffSmolenskaya" />
+        </EntityType>
+        <EntityType Name="StaffNovokuznetskaya">
+          <Key>
+            <PropertyRef Name="IdStaffNovokuznetskaya" />
+          </Key>
+          <Property Name="IdStaffNovokuznetskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FLMStaffNovokuznetskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumberPhoneStaffNovokuznetskaya" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmailStaffNovokuznetskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PositionStaffNovokuznetskaya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_StaffNovokuznetskaya" FromRole="StaffNovokuznetskaya" ToRole="Novokuznetskaya" />
+        </EntityType>
+        <EntityType Name="StaffPaveletskaya">
+          <Key>
+            <PropertyRef Name="IdStaffPaveletskaya" />
+          </Key>
+          <Property Name="IdStaffPaveletskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FLMStaffPaveletskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumberPhoneStaffPaveletskaya" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmailStaffPaveletskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PositionStaffPaveletskaya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Paveletskaya" Relationship="Self.FK_Paveletskaya_StaffPaveletskaya" FromRole="StaffPaveletskaya" ToRole="Paveletskaya" />
+        </EntityType>
+        <EntityType Name="StaffSmolenskaya">
+          <Key>
+            <PropertyRef Name="IdStaffSmolenskaya" />
+          </Key>
+          <Property Name="IdStaffSmolenskaya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FLMStaffSmolenskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumberPhoneStaffSmolenskaya" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmailStaffSmolenskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PositionStaffSmolenskaya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Smolenskaya" Relationship="Self.FK_Smolenskaya_StaffSmolenskaya" FromRole="StaffSmolenskaya" ToRole="Smolenskaya" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TitleStaff">
+          <Key>
+            <PropertyRef Name="IdTittleStaff" />
+          </Key>
+          <Property Name="IdTittleStaff" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameTittleStaff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="IdUser" />
+          </Key>
+          <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PasswordUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdRole" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
+        </EntityType>
+        <Association Name="FK_Novokuznetskaya_Cleaning">
+          <End Role="Cleaning" Type="Self.Cleaning" Multiplicity="1" />
+          <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cleaning">
+              <PropertyRef Name="IdCleaning" />
+            </Principal>
+            <Dependent Role="Novokuznetskaya">
+              <PropertyRef Name="IdCleaning" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Paveletskaya_Cleaning">
+          <End Role="Cleaning" Type="Self.Cleaning" Multiplicity="1" />
+          <End Role="Paveletskaya" Type="Self.Paveletskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cleaning">
+              <PropertyRef Name="IdCleaning" />
+            </Principal>
+            <Dependent Role="Paveletskaya">
+              <PropertyRef Name="IdCleaning" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Smolenskaya_Cleaning">
+          <End Role="Cleaning" Type="Self.Cleaning" Multiplicity="1" />
+          <End Role="Smolenskaya" Type="Self.Smolenskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cleaning">
+              <PropertyRef Name="IdCleaning" />
+            </Principal>
+            <Dependent Role="Smolenskaya">
+              <PropertyRef Name="IdCleaning" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Novokuznetskaya_HelperNovokuznetskaya">
+          <End Role="HelperNovokuznetskaya" Type="Self.HelperNovokuznetskaya" Multiplicity="1" />
+          <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HelperNovokuznetskaya">
+              <PropertyRef Name="IdHelperNovokuznetskaya" />
+            </Principal>
+            <Dependent Role="Novokuznetskaya">
+              <PropertyRef Name="IdSessionNovokuznetskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Paveletskaya_HelperPaveletskaya">
+          <End Role="HelperPaveletskaya" Type="Self.HelperPaveletskaya" Multiplicity="1" />
+          <End Role="Paveletskaya" Type="Self.Paveletskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HelperPaveletskaya">
+              <PropertyRef Name="IdHelperPaveletskaya" />
+            </Principal>
+            <Dependent Role="Paveletskaya">
+              <PropertyRef Name="IdSessionPaveletskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Smolenskaya_HelperSmolenskaya">
+          <End Role="HelperSmolenskaya" Type="Self.HelperSmolenskaya" Multiplicity="1" />
+          <End Role="Smolenskaya" Type="Self.Smolenskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HelperSmolenskaya">
+              <PropertyRef Name="IdHelperSmolenskaya" />
+            </Principal>
+            <Dependent Role="Smolenskaya">
+              <PropertyRef Name="IdHelperSmolenskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Novokuznetskaya_SessionNovokuznetskaya">
+          <End Role="SessionNovokuznetskaya" Type="Self.SessionNovokuznetskaya" Multiplicity="1" />
+          <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SessionNovokuznetskaya">
+              <PropertyRef Name="IdSessionNovokuznetskaya" />
+            </Principal>
+            <Dependent Role="Novokuznetskaya">
+              <PropertyRef Name="IdHelperNovokuznetskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Novokuznetskaya_StaffNovokuznetskaya">
+          <End Role="StaffNovokuznetskaya" Type="Self.StaffNovokuznetskaya" Multiplicity="1" />
+          <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StaffNovokuznetskaya">
+              <PropertyRef Name="IdStaffNovokuznetskaya" />
+            </Principal>
+            <Dependent Role="Novokuznetskaya">
+              <PropertyRef Name="IdStaffNovokuznetskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Paveletskaya_SessionPaveletskaya">
+          <End Role="SessionPaveletskaya" Type="Self.SessionPaveletskaya" Multiplicity="1" />
+          <End Role="Paveletskaya" Type="Self.Paveletskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SessionPaveletskaya">
+              <PropertyRef Name="IdSessionPaveletskaya" />
+            </Principal>
+            <Dependent Role="Paveletskaya">
+              <PropertyRef Name="IdHelperPaveletskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Paveletskaya_StaffPaveletskaya">
+          <End Role="StaffPaveletskaya" Type="Self.StaffPaveletskaya" Multiplicity="1" />
+          <End Role="Paveletskaya" Type="Self.Paveletskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StaffPaveletskaya">
+              <PropertyRef Name="IdStaffPaveletskaya" />
+            </Principal>
+            <Dependent Role="Paveletskaya">
+              <PropertyRef Name="IdStaffPaveletskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="IdRole" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="IdRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Smolenskaya_SessionSmolenskaya">
+          <End Role="SessionSmolenskaya" Type="Self.SessionSmolenskaya" Multiplicity="1" />
+          <End Role="Smolenskaya" Type="Self.Smolenskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SessionSmolenskaya">
+              <PropertyRef Name="IdSessionSmolenskaya" />
+            </Principal>
+            <Dependent Role="Smolenskaya">
+              <PropertyRef Name="IdSessionSmolenskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Smolenskaya_StaffSmolenskaya">
+          <End Role="StaffSmolenskaya" Type="Self.StaffSmolenskaya" Multiplicity="1" />
+          <End Role="Smolenskaya" Type="Self.Smolenskaya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StaffSmolenskaya">
+              <PropertyRef Name="IdStaffSmolenskaya" />
+            </Principal>
+            <Dependent Role="Smolenskaya">
+              <PropertyRef Name="IdStaffSmolenskaya" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cleaning" EntityType="Self.Cleaning" />
+          <EntitySet Name="HelperNovokuznetskaya" EntityType="Self.HelperNovokuznetskaya" />
+          <EntitySet Name="HelperPaveletskaya" EntityType="Self.HelperPaveletskaya" />
+          <EntitySet Name="HelperSmolenskaya" EntityType="Self.HelperSmolenskaya" />
+          <EntitySet Name="Novokuznetskaya" EntityType="Self.Novokuznetskaya" />
+          <EntitySet Name="Paveletskaya" EntityType="Self.Paveletskaya" />
+          <EntitySet Name="Role" EntityType="Self.Role" />
+          <EntitySet Name="SessionNovokuznetskaya" EntityType="Self.SessionNovokuznetskaya" />
+          <EntitySet Name="SessionPaveletskaya" EntityType="Self.SessionPaveletskaya" />
+          <EntitySet Name="SessionSmolenskaya" EntityType="Self.SessionSmolenskaya" />
+          <EntitySet Name="Smolenskaya" EntityType="Self.Smolenskaya" />
+          <EntitySet Name="StaffNovokuznetskaya" EntityType="Self.StaffNovokuznetskaya" />
+          <EntitySet Name="StaffPaveletskaya" EntityType="Self.StaffPaveletskaya" />
+          <EntitySet Name="StaffSmolenskaya" EntityType="Self.StaffSmolenskaya" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="TitleStaff" EntityType="Self.TitleStaff" />
+          <EntitySet Name="User" EntityType="Self.User" />
+          <AssociationSet Name="FK_Novokuznetskaya_Cleaning" Association="Self.FK_Novokuznetskaya_Cleaning">
+            <End Role="Cleaning" EntitySet="Cleaning" />
+            <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Paveletskaya_Cleaning" Association="Self.FK_Paveletskaya_Cleaning">
+            <End Role="Cleaning" EntitySet="Cleaning" />
+            <End Role="Paveletskaya" EntitySet="Paveletskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Smolenskaya_Cleaning" Association="Self.FK_Smolenskaya_Cleaning">
+            <End Role="Cleaning" EntitySet="Cleaning" />
+            <End Role="Smolenskaya" EntitySet="Smolenskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Novokuznetskaya_HelperNovokuznetskaya" Association="Self.FK_Novokuznetskaya_HelperNovokuznetskaya">
+            <End Role="HelperNovokuznetskaya" EntitySet="HelperNovokuznetskaya" />
+            <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Paveletskaya_HelperPaveletskaya" Association="Self.FK_Paveletskaya_HelperPaveletskaya">
+            <End Role="HelperPaveletskaya" EntitySet="HelperPaveletskaya" />
+            <End Role="Paveletskaya" EntitySet="Paveletskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Smolenskaya_HelperSmolenskaya" Association="Self.FK_Smolenskaya_HelperSmolenskaya">
+            <End Role="HelperSmolenskaya" EntitySet="HelperSmolenskaya" />
+            <End Role="Smolenskaya" EntitySet="Smolenskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Novokuznetskaya_SessionNovokuznetskaya" Association="Self.FK_Novokuznetskaya_SessionNovokuznetskaya">
+            <End Role="SessionNovokuznetskaya" EntitySet="SessionNovokuznetskaya" />
+            <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Novokuznetskaya_StaffNovokuznetskaya" Association="Self.FK_Novokuznetskaya_StaffNovokuznetskaya">
+            <End Role="StaffNovokuznetskaya" EntitySet="StaffNovokuznetskaya" />
+            <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Paveletskaya_SessionPaveletskaya" Association="Self.FK_Paveletskaya_SessionPaveletskaya">
+            <End Role="SessionPaveletskaya" EntitySet="SessionPaveletskaya" />
+            <End Role="Paveletskaya" EntitySet="Paveletskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Paveletskaya_StaffPaveletskaya" Association="Self.FK_Paveletskaya_StaffPaveletskaya">
+            <End Role="StaffPaveletskaya" EntitySet="StaffPaveletskaya" />
+            <End Role="Paveletskaya" EntitySet="Paveletskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Smolenskaya_SessionSmolenskaya" Association="Self.FK_Smolenskaya_SessionSmolenskaya">
+            <End Role="SessionSmolenskaya" EntitySet="SessionSmolenskaya" />
+            <End Role="Smolenskaya" EntitySet="Smolenskaya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Smolenskaya_StaffSmolenskaya" Association="Self.FK_Smolenskaya_StaffSmolenskaya">
+            <End Role="StaffSmolenskaya" EntitySet="StaffSmolenskaya" />
+            <End Role="Smolenskaya" EntitySet="Smolenskaya" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DBModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DBModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище DBModelContainer" CdmEntityContainer="DBEntities">
+          <EntitySetMapping Name="Cleaning">
+            <EntityTypeMapping TypeName="DBModel.Cleaning">
+              <MappingFragment StoreEntitySet="Cleaning">
+                <ScalarProperty Name="IdCleaning" ColumnName="IdCleaning" />
+                <ScalarProperty Name="NameCleaning" ColumnName="NameCleaning" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HelperNovokuznetskaya">
+            <EntityTypeMapping TypeName="DBModel.HelperNovokuznetskaya">
+              <MappingFragment StoreEntitySet="HelperNovokuznetskaya">
+                <ScalarProperty Name="IdHelperNovokuznetskaya" ColumnName="IdHelperNovokuznetskaya" />
+                <ScalarProperty Name="FLMHelperNovokuznetskaya" ColumnName="FLMHelperNovokuznetskaya" />
+                <ScalarProperty Name="NumberPhoneHelperNovokuznetskaya" ColumnName="NumberPhoneHelperNovokuznetskaya" />
+                <ScalarProperty Name="EmailHelperNovokuznetskaya" ColumnName="EmailHelperNovokuznetskaya" />
+                <ScalarProperty Name="PositionHelperNovokuznetskaya" ColumnName="PositionHelperNovokuznetskaya" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HelperPaveletskaya">
+            <EntityTypeMapping TypeName="DBModel.HelperPaveletskaya">
+              <MappingFragment StoreEntitySet="HelperPaveletskaya">
+                <ScalarProperty Name="IdHelperPaveletskaya" ColumnName="IdHelperPaveletskaya" />
+                <ScalarProperty Name="FLMHelperPaveletskaya" ColumnName="FLMHelperPaveletskaya" />
+                <ScalarProperty Name="NumberPhoneHelperPaveletskaya" ColumnName="NumberPhoneHelperPaveletskaya" />
+                <ScalarProperty Name="EmailHelperPaveletskaya" ColumnName="EmailHelperPaveletskaya" />
+                <ScalarProperty Name="PositionHelperPaveletskaya" ColumnName="PositionHelperPaveletskaya" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HelperSmolenskaya">
+            <EntityTypeMapping TypeName="DBModel.HelperSmolenskaya">
+              <MappingFragment StoreEntitySet="HelperSmolenskaya">
+                <ScalarProperty Name="IdHelperSmolenskaya" ColumnName="IdHelperSmolenskaya" />
+                <ScalarProperty Name="FLMHelperSmolenskaya" ColumnName="FLMHelperSmolenskaya" />
+                <ScalarProperty Name="NumberPhoneHelperSmolenskaya" ColumnName="NumberPhoneHelperSmolenskaya" />
+                <ScalarProperty Name="EmailHelperSmolenskaya" ColumnName="EmailHelperSmolenskaya" />
+                <ScalarProperty Name="PositionHelperSmolenskaya" ColumnName="PositionHelperSmolenskaya" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Novokuznetskaya">
+            <EntityTypeMapping TypeName="DBModel.Novokuznetskaya">
+              <MappingFragment StoreEntitySet="Novokuznetskaya">
+                <ScalarProperty Name="IdNovokuznetskaya" ColumnName="IdNovokuznetskaya" />
+                <ScalarProperty Name="IdStaffNovokuznetskaya" ColumnName="IdStaffNovokuznetskaya" />
+                <ScalarProperty Name="IdHelperNovokuznetskaya" ColumnName="IdHelperNovokuznetskaya" />
+                <ScalarProperty Name="IdSessionNovokuznetskaya" ColumnName="IdSessionNovokuznetskaya" />
+                <ScalarProperty Name="NumberOfNachosNovokuznetskaya" ColumnName="NumberOfNachosNovokuznetskaya" />
+                <ScalarProperty Name="NumberOfCrispsNovokuznetskaya" ColumnName="NumberOfCrispsNovokuznetskaya" />
+                <ScalarProperty Name="AmountOfColaNovokuznetskaya" ColumnName="AmountOfColaNovokuznetskaya" />
+                <ScalarProperty Name="AmountOfFantaNovokuznetskaya" ColumnName="AmountOfFantaNovokuznetskaya" />
+                <ScalarProperty Name="AmountOfSweetPopcornNovokuznetskaya" ColumnName="AmountOfSweetPopcornNovokuznetskaya" />
+                <ScalarProperty Name="AmountOfSaltedPopcornNovokuznetskaya" ColumnName="AmountOfSaltedPopcornNovokuznetskaya" />
+                <ScalarProperty Name="AmountOfCaramelPopcornNovokuznetskaya" ColumnName="AmountOfCaramelPopcornNovokuznetskaya" />
+                <ScalarProperty Name="IdCleaning" ColumnName="IdCleaning" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Paveletskaya">
+            <EntityTypeMapping TypeName="DBModel.Paveletskaya">
+              <MappingFragment StoreEntitySet="Paveletskaya">
+                <ScalarProperty Name="IdPaveletskaya" ColumnName="IdPaveletskaya" />
+                <ScalarProperty Name="IdStaffPaveletskaya" ColumnName="IdStaffPaveletskaya" />
+                <ScalarProperty Name="IdHelperPaveletskaya" ColumnName="IdHelperPaveletskaya" />
+                <ScalarProperty Name="IdSessionPaveletskaya" ColumnName="IdSessionPaveletskaya" />
+                <ScalarProperty Name="NumberOfNachosPaveletskaya" ColumnName="NumberOfNachosPaveletskaya" />
+                <ScalarProperty Name="NumberOfCrispsPaveletskaya" ColumnName="NumberOfCrispsPaveletskaya" />
+                <ScalarProperty Name="AmountOfColaPaveletskaya" ColumnName="AmountOfColaPaveletskaya" />
+                <ScalarProperty Name="AmountOfFantaPaveletskaya" ColumnName="AmountOfFantaPaveletskaya" />
+                <ScalarProperty Name="AmountOfSweetPopcornPaveletskaya" ColumnName="AmountOfSweetPopcornPaveletskaya" />
+                <ScalarProperty Name="AmountOfSaltedPopcornPaveletskaya" ColumnName="AmountOfSaltedPopcornPaveletskaya" />
+                <ScalarProperty Name="AmountOfCaramelPopcornPaveletskaya" ColumnName="AmountOfCaramelPopcornPaveletskaya" />
+                <ScalarProperty Name="IdCleaning" ColumnName="IdCleaning" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Role">
+            <EntityTypeMapping TypeName="DBModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+                <ScalarProperty Name="NameRole" ColumnName="NameRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SessionNovokuznetskaya">
+            <EntityTypeMapping TypeName="DBModel.SessionNovokuznetskaya">
+              <MappingFragment StoreEntitySet="SessionNovokuznetskaya">
+                <ScalarProperty Name="IdSessionNovokuznetskaya" ColumnName="IdSessionNovokuznetskaya" />
+                <ScalarProperty Name="NameSessionNovokuznetskaya" ColumnName="NameSessionNovokuznetskaya" />
+                <ScalarProperty Name="ARSeissionNovokuznetskaya" ColumnName="ARSeissionNovokuznetskaya" />
+                <ScalarProperty Name="TimeSessionNovokuznetskaya" ColumnName="TimeSessionNovokuznetskaya" />
+                <ScalarProperty Name="ImageSessionNovokuznetskaya" ColumnName="ImageSessionNovokuznetskaya" />
+                <ScalarProperty Name="DateSessionNovokuznetskaya" ColumnName="DateSessionNovokuznetskaya" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SessionPaveletskaya">
+            <EntityTypeMapping TypeName="DBModel.SessionPaveletskaya">
+              <MappingFragment StoreEntitySet="SessionPaveletskaya">
+                <ScalarProperty Name="IdSessionPaveletskaya" ColumnName="IdSessionPaveletskaya" />
+                <ScalarProperty Name="NameSessionPaveletskaya" ColumnName="NameSessionPaveletskaya" />
+                <ScalarProperty Name="ARSeissionPaveletskaya" ColumnName="ARSeissionPaveletskaya" />
+                <ScalarProperty Name="TimeSessionPaveletskaya" ColumnName="TimeSessionPaveletskaya" />
+                <ScalarProperty Name="ImageSessionPaveletskaya" ColumnName="ImageSessionPaveletskaya" />
+                <ScalarProperty Name="DateSession" ColumnName="DateSession" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SessionSmolenskaya">
+            <EntityTypeMapping TypeName="DBModel.SessionSmolenskaya">
+              <MappingFragment StoreEntitySet="SessionSmolenskaya">
+                <ScalarProperty Name="IdSessionSmolenskaya" ColumnName="IdSessionSmolenskaya" />
+                <ScalarProperty Name="NameSessionSmolenskaya" ColumnName="NameSessionSmolenskaya" />
+                <ScalarProperty Name="ARSeissionSmolenskaya" ColumnName="ARSeissionSmolenskaya" />
+                <ScalarProperty Name="TimeSessionSmolenskaya" ColumnName="TimeSessionSmolenskaya" />
+                <ScalarProperty Name="ImageSessionSmolenskaya" ColumnName="ImageSessionSmolenskaya" />
+                <ScalarProperty Name="DateSessionSmolenskaya" ColumnName="DateSessionSmolenskaya" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Smolenskaya">
+            <EntityTypeMapping TypeName="DBModel.Smolenskaya">
+              <MappingFragment StoreEntitySet="Smolenskaya">
+                <ScalarProperty Name="IdSmolenskaya" ColumnName="IdSmolenskaya" />
+                <ScalarProperty Name="IdStaffSmolenskaya" ColumnName="IdStaffSmolenskaya" />
+                <ScalarProperty Name="IdSessionSmolenskaya" ColumnName="IdSessionSmolenskaya" />
+                <ScalarProperty Name="IdHelperSmolenskaya" ColumnName="IdHelperSmolenskaya" />
+                <ScalarProperty Name="NumberOfNachosSmolenskaya" ColumnName="NumberOfNachosSmolenskaya" />
+                <ScalarProperty Name="NumberOfCrispsSmolenskaya" ColumnName="NumberOfCrispsSmolenskaya" />
+                <ScalarProperty Name="AmountOfColaSmolenskaya" ColumnName="AmountOfColaSmolenskaya" />
+                <ScalarProperty Name="AmountOfFantaSmolenskaya" ColumnName="AmountOfFantaSmolenskaya" />
+                <ScalarProperty Name="AmountOfSweetPopcornSmolenskaya" ColumnName="AmountOfSweetPopcornSmolenskaya" />
+                <ScalarProperty Name="AmountOfSaltedPopcornSmolenskaya" ColumnName="AmountOfSaltedPopcornSmolenskaya" />
+                <ScalarProperty Name="AmountOfCaramelPopcornSmolenskaya" ColumnName="AmountOfCaramelPopcornSmolenskaya" />
+                <ScalarProperty Name="IdCleaning" ColumnName="IdCleaning" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StaffNovokuznetskaya">
+            <EntityTypeMapping TypeName="DBModel.StaffNovokuznetskaya">
+              <MappingFragment StoreEntitySet="StaffNovokuznetskaya">
+                <ScalarProperty Name="IdStaffNovokuznetskaya" ColumnName="IdStaffNovokuznetskaya" />
+                <ScalarProperty Name="FLMStaffNovokuznetskaya" ColumnName="FLMStaffNovokuznetskaya" />
+                <ScalarProperty Name="NumberPhoneStaffNovokuznetskaya" ColumnName="NumberPhoneStaffNovokuznetskaya" />
+                <ScalarProperty Name="EmailStaffNovokuznetskaya" ColumnName="EmailStaffNovokuznetskaya" />
+                <ScalarProperty Name="PositionStaffNovokuznetskaya" ColumnName="PositionStaffNovokuznetskaya" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StaffPaveletskaya">
+            <EntityTypeMapping TypeName="DBModel.StaffPaveletskaya">
+              <MappingFragment StoreEntitySet="StaffPaveletskaya">
+                <ScalarProperty Name="IdStaffPaveletskaya" ColumnName="IdStaffPaveletskaya" />
+                <ScalarProperty Name="FLMStaffPaveletskaya" ColumnName="FLMStaffPaveletskaya" />
+                <ScalarProperty Name="NumberPhoneStaffPaveletskaya" ColumnName="NumberPhoneStaffPaveletskaya" />
+                <ScalarProperty Name="EmailStaffPaveletskaya" ColumnName="EmailStaffPaveletskaya" />
+                <ScalarProperty Name="PositionStaffPaveletskaya" ColumnName="PositionStaffPaveletskaya" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StaffSmolenskaya">
+            <EntityTypeMapping TypeName="DBModel.StaffSmolenskaya">
+              <MappingFragment StoreEntitySet="StaffSmolenskaya">
+                <ScalarProperty Name="IdStaffSmolenskaya" ColumnName="IdStaffSmolenskaya" />
+                <ScalarProperty Name="FLMStaffSmolenskaya" ColumnName="FLMStaffSmolenskaya" />
+                <ScalarProperty Name="NumberPhoneStaffSmolenskaya" ColumnName="NumberPhoneStaffSmolenskaya" />
+                <ScalarProperty Name="EmailStaffSmolenskaya" ColumnName="EmailStaffSmolenskaya" />
+                <ScalarProperty Name="PositionStaffSmolenskaya" ColumnName="PositionStaffSmolenskaya" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DBModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TitleStaff">
+            <EntityTypeMapping TypeName="DBModel.TitleStaff">
+              <MappingFragment StoreEntitySet="TitleStaff">
+                <ScalarProperty Name="IdTittleStaff" ColumnName="IdTittleStaff" />
+                <ScalarProperty Name="NameTittleStaff" ColumnName="NameTittleStaff" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="DBModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="LoginUser" ColumnName="LoginUser" />
+                <ScalarProperty Name="PasswordUser" ColumnName="PasswordUser" />
+                <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище DBModel.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище DBModel.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище DBModel.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище DBModel.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище DBModel.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище DBModel.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище DBModel.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
