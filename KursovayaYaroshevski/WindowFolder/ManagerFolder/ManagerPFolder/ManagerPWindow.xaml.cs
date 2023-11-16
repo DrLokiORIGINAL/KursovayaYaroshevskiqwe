@@ -1,4 +1,6 @@
 ﻿using KursovayaYaroshevski.ClassFolder;
+using KursovayaYaroshevski.PageFolder.ManagerPageFolder.ManagerPagePFolder;
+using KursovayaYaroshevski.PageFolder.ManagerPageFolder.ManagerPageSFolder;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +25,7 @@ namespace KursovayaYaroshevski.WindowFolder.ManagerFolder.ManagerPFolder
         public ManagerPWindow()
         {
             InitializeComponent();
+            MaiFrame.Navigate(new PageFolder.ManagerPageFolder.ManagerPagePFolder.ListManagerPPage());
         }
 
         private void Close_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -36,27 +39,28 @@ namespace KursovayaYaroshevski.WindowFolder.ManagerFolder.ManagerPFolder
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
 
         private void ListStaffBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MaiFrame.Navigate(new ListManagerPPage());
         }
 
         private void AddStaffBtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            MaiFrame.Navigate(new AddManagerPPage());
         }
 
         private void ListHelperBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MaiFrame.Navigate(new ListHelperPPage());
         }
 
         private void AddHelperBtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            MaiFrame.Navigate(new AddHelperPPage());
         }
     }
 }

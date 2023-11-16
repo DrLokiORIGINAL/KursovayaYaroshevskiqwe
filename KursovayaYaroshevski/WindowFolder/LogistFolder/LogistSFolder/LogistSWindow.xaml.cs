@@ -1,4 +1,6 @@
 ﻿using KursovayaYaroshevski.ClassFolder;
+using KursovayaYaroshevski.PageFolder.LogistPageFolder.LogistPagePFolder;
+using KursovayaYaroshevski.PageFolder.LogistPageFolder.LogistPageSFolder;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +25,7 @@ namespace KursovayaYaroshevski.WindowFolder.LogistFolder.LogistSFolder
         public LogistSWindow()
         {
             InitializeComponent();
+            MaiFrame.Navigate(new PageFolder.LogistPageFolder.LogistPageSFolder.ListLogistSPage());
         }
 
         private void Close_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -36,17 +39,18 @@ namespace KursovayaYaroshevski.WindowFolder.LogistFolder.LogistSFolder
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
 
         private void ListLogistBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MaiFrame.Navigate(new ListLogistSPage());
         }
 
         private void AddBtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            MaiFrame.Navigate(new AddLogistSPage());
         }
     }
 }

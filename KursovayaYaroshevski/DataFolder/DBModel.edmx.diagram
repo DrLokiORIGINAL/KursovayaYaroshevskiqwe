@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="da32548eb3b84c99adcd56fcc8973f8d" Name="Diagram1">
+      <Diagram DiagramId="beb6c6a5080f406aa593de786e48e32c" Name="Diagram1">
         <EntityTypeShape EntityType="DBModel.Cleaning" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.HelperNovokuznetskaya" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.HelperPaveletskaya" Width="1.5" PointX="3.75" PointY="11.25" IsExpanded="true" />
@@ -22,14 +22,14 @@
         <EntityTypeShape EntityType="DBModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.TitleStaff" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.User" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="DBModel.FK_Novokuznetskaya_Cleaning" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Novokuznetskaya_Cleaning1" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Paveletskaya_Cleaning" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Smolenskaya_Cleaning" ManuallyRouted="false" />
-        <AssociationConnector Association="DBModel.FK_Novokuznetskaya_HelperNovokuznetskaya" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Novokuznetskaya_HelperNovokuznetskaya1" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Paveletskaya_HelperPaveletskaya" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Smolenskaya_HelperSmolenskaya" ManuallyRouted="false" />
-        <AssociationConnector Association="DBModel.FK_Novokuznetskaya_SessionNovokuznetskaya" ManuallyRouted="false" />
-        <AssociationConnector Association="DBModel.FK_Novokuznetskaya_StaffNovokuznetskaya" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Novokuznetskaya_SessionNovokuznetskaya1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Novokuznetskaya_StaffNovokuznetskaya1" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Paveletskaya_SessionPaveletskaya" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Paveletskaya_StaffPaveletskaya" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_User_Role" ManuallyRouted="false" />

@@ -110,7 +110,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="№ п/п" 
                                     Binding="{Binding IdUser}"
-                                    Width="*"
+                                    Width="150"
                                     Foreground="White"/>
                 <DataGridTextColumn Header="Логин" 
                                     Binding="{Binding LoginUser}"

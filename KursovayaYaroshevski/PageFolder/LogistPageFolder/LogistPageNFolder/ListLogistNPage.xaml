@@ -15,6 +15,145 @@
       Title="ListLogistNPage">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="150"/>
+        <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="70"/>
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+        <TextBox x:Name="SearchTb"
+                 Style="{DynamicResource Search}"
+                 TextChanged="SearchTb_TextChanged"
+                 Grid.ColumnSpan="2"
+                         Margin="0, 0, 0, 0"
+                 Width="600"
+                 Height="30"
+                 Padding="4,0"
+                 FontSize="18">
+
+            <TextBox.Template>
+                <ControlTemplate TargetType="TextBox">
+                    <Grid>
+                        <Border CornerRadius="5"
+                            Background="Transparent"
+                            BorderBrush="White"
+                            BorderThickness="2">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label x:Name="SearchNx"
+                               Content="Поиск"
+                               Style="{DynamicResource NormalLabelStyle}"
+                               Visibility="Collapsed"
+                               Margin="0, 0, 0, 0"
+                               FontSize="15"
+                               Foreground="LightGray"/>
+
+                                <ScrollViewer x:Name="PART_ContentHost"
+                                      Grid.ColumnSpan="3"
+                                      Margin="0, 0, 0, 0"
+                                      Focusable="False"
+                                      HorizontalScrollBarVisibility="Hidden"
+                                      VerticalScrollBarVisibility="Hidden"/>
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="SearchNx" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.56"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
         
+        <ListBox Grid.Row="1"
+                 Grid.ColumnSpan="2"
+                 x:Name="ListLogistNLB"
+                 SelectionMode="Multiple">
+
+        <ListBox.ContextMenu>
+            <ContextMenu Name="AdtCM">
+                <MenuItem x:Name="Red"
+                        Header="Редактирование"
+                 Click="Red_Click"/>
+
+                <Separator/>
+                <MenuItem x:Name="Del"
+                        Header="Удалить"
+                 Click="Del_Click"/>
+            </ContextMenu>
+        </ListBox.ContextMenu>
+
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.RowSpan="4"
+                               Grid.Column="2"
+                               Source="{Binding ImageSessionNovokuznetskaya}"/>
+
+                    <TextBlock Grid.Column="1" 
+                               Grid.Row="0"
+                            Style="{DynamicResource StyleTextBlock}">
+                            <Run Text="Номер сессии: "/>
+                            <Run Text="{Binding IdSessionNovokuznetskaya}"/>
+                    </TextBlock>
+
+                    <TextBlock Grid.Column="1"
+                               Grid.Row="1"
+                            Style="{DynamicResource StyleTextBlock}">
+                            <Run Text="Название сессии: "/>
+                            <Run Text="{Binding NameSessionNovokuznetskaya}"/>
+                    </TextBlock>
+
+                    <TextBlock Grid.Row="4"  
+                               Grid.Column="2"
+                            Style="{DynamicResource StyleTextBlock}">
+                            <Run Text="Возрастной рейтинг: "/>
+                            <Run Text="{Binding ARSeissionNovokuznetskaya}"/>
+                    </TextBlock>
+
+                    <TextBlock Grid.Row="2" 
+                               Grid.Column="1"
+                            Style="{DynamicResource StyleTextBlock}">
+                            <Run Text="Время сессии: "/>
+                            <Run Text="{Binding TimeSessionNovokuznetskaya}"/>
+                    </TextBlock>
+
+                        <TextBlock Grid.Row="3" 
+                                   Grid.Column="1"
+                            Style="{DynamicResource StyleTextBlock}">
+                            <Run Text="Дата сессии: "/>
+                            <Run Text="{Binding DateSessionNovokuznetskaya}"/>
+                        </TextBlock>
+                    </Grid>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
     </Grid>
 </Page>

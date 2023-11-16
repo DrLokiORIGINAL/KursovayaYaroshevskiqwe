@@ -14,7 +14,231 @@
       MinWidth="874"
       Title="AddAdministratorNPage">
 
-    <Grid>
-        
-    </Grid>
+    <Border>
+        <Grid>
+            <ComboBox x:Name="StaffCb"
+                      Style="{DynamicResource MaterialDesignComboBox}"
+                      materialDesign:HintAssist.Hint="Сотрудник"
+                      Foreground="#828282"
+                      BorderBrush="White"
+                      Background="Transparent"
+                      BorderThickness="0 0 0 1.5"
+                      Grid.Row="1"
+                      Grid.Column="0"
+                      Margin="30,0,30,0"
+                      FontSize="20"
+                      FontFamily="Cascadia Mono SemiLight" 
+                      Height="40"
+                      SelectedItem="{Binding StaffNovokuznetskaya}" 
+                          DisplayMemberPath="FLMStaffNovokuznetskaya"
+                          SelectedValuePath="IdStaffNovokuznetskaya" />
+
+            <ComboBox x:Name="SessionCb"
+                      Style="{DynamicResource MaterialDesignComboBox}"
+                      materialDesign:HintAssist.Hint="Сессия"
+                      Foreground="#828282"
+                      BorderBrush="White"
+                      Background="Transparent"
+                      BorderThickness="0 0 0 1.5"
+                      Grid.Row="1"
+                      Grid.Column="1"
+                      Margin="30,0,30,0"
+                      FontSize="20"
+                      FontFamily="Cascadia Mono SemiLight" 
+                      Height="40"
+                      SelectedItem="{Binding SessionNovokuznetskaya}" 
+                          DisplayMemberPath="NameSessionNovokuznetskaya"
+                          SelectedValuePath="IdSessionNovokuznetskaya"/>
+
+            <ComboBox x:Name="HelperCb"
+                      Style="{DynamicResource MaterialDesignComboBox}"
+                      materialDesign:HintAssist.Hint="Помощник"
+                      Foreground="#828282"
+                      BorderBrush="White"
+                      Background="Transparent"
+                      BorderThickness="0 0 0 1.5"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      Margin="30,0,30,0"
+                      FontSize="20"
+                      FontFamily="Cascadia Mono SemiLight" 
+                      Height="30"
+                      SelectedItem="{Binding HelperNovokuznetskaya}" 
+                          DisplayMemberPath="FLMHelperNovokuznetskaya"
+                          SelectedValuePath="IdHelperNovokuznetskaya"/>
+
+            <TextBox x:Name="NachosTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.Hint="Количество упаковок начос(шт)"
+                     Foreground="White"
+                     FontSize="20"
+                     Grid.Row="2"
+                     Grid.Column="1"
+                     VerticalAlignment="Center"
+                         Margin="30,0,30,0"
+                         materialDesign:HintAssist.FloatingOffset="0,-20"
+                                     BorderBrush="White" 
+                                     BorderThickness="0 0 0 1.5" 
+                     Height="40"/>
+
+            <TextBox x:Name="CrispsTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.Hint="Количество упаковок чипсов(шт)"
+                     Foreground="White"
+                     FontSize="20"
+                     Grid.Row="3"
+                     Grid.Column="0"
+                     VerticalAlignment="Center"
+                         Margin="30,0,30,0"
+                         materialDesign:HintAssist.FloatingOffset="0,-20"
+                                     BorderBrush="White" 
+                                     BorderThickness="0 0 0 1.5"
+                     Height="40"/>
+
+            <TextBox x:Name="ColaTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.Hint="Количество бутылок колы(0.5)"
+                     Foreground="White"
+                     FontSize="20"
+                     Grid.Row="3"
+                     Grid.Column="1"
+                     VerticalAlignment="Center"
+                         Margin="30,0,30,0"
+                         materialDesign:HintAssist.FloatingOffset="0,-20"
+                                     BorderBrush="White" 
+                                     BorderThickness="0 0 0 1.5"
+                     Text="{Binding AmountOfColaNovokuznetskaya}" 
+                     Height="40"/>
+
+            <TextBox x:Name="FantaTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.Hint="Количество бутылок фанты(0.5)"
+                     Foreground="White"
+                     FontSize="20"
+                     Grid.Row="4"
+                     Grid.Column="0"
+                     VerticalAlignment="Center"
+                         Margin="30,0,30,0"
+                         materialDesign:HintAssist.FloatingOffset="0,-20"
+                                     BorderBrush="White" 
+                                     BorderThickness="0 0 0 1.5"
+                     Text="{Binding AmountOfFantaNovokuznetskaya}" 
+                     Height="40"/>
+
+            <TextBox x:Name="SweetTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.Hint="Количество сладкого покорна(уп)"
+                     Foreground="White"
+                     FontSize="20"
+                     Grid.Row="4"
+                     Grid.Column="1"
+                     VerticalAlignment="Center"
+                         Margin="30,0,30,0"
+                         materialDesign:HintAssist.FloatingOffset="0,-20"
+                                     BorderBrush="White" 
+                                     BorderThickness="0 0 0 1.5"
+                     Height="40"/>
+
+            <TextBox x:Name="SaltTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.Hint="Количество соленого попкорна(уп)"
+                     Foreground="White"
+                     FontSize="20"
+                     Grid.Row="5"
+                     Grid.Column="0"
+                     VerticalAlignment="Center"
+                         Margin="30,0,30,0"
+                         materialDesign:HintAssist.FloatingOffset="0,-20"
+                                     BorderBrush="White" 
+                                     BorderThickness="0 0 0 1.5"
+                     Height="40"/>
+
+            <TextBox x:Name="CaramelTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.Hint="Количество карам. попкорна(уп)"
+                     Foreground="White"
+                     FontSize="20"
+                     Grid.Row="5"
+                     Grid.Column="1"
+                     VerticalAlignment="Center"
+                         Margin="30,0,30,0"
+                         materialDesign:HintAssist.FloatingOffset="0,-20"
+                                     BorderBrush="White" 
+                                     BorderThickness="0 0 0 1.5"
+                     Text="{Binding AmountOfCaramelPopcornNovokuznetskaya}" 
+                     Height="40"/>
+
+            <ComboBox x:Name="CleaningCb"
+                      Style="{DynamicResource MaterialDesignComboBox}"
+                      materialDesign:HintAssist.Hint="Нужна ли химчистка"
+                      Foreground="#828282"
+                      BorderBrush="White"
+                      Background="Transparent"
+                      BorderThickness="0 0 0 1.5"
+                      Grid.Row="6"
+                      Margin="248,0,248,0"
+                      FontSize="20" 
+                      FontFamily="Cascadia Mono SemiLight" 
+                      Height="40" 
+                      Grid.ColumnSpan="2"
+                      SelectedItem="{Binding Cleaning}" 
+                          DisplayMemberPath="NameCleaning"
+                          SelectedValuePath="IdCleaning"/>
+
+            <Label Content="Добавление ячейки" 
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2" 
+                   BorderBrush="Transparent"
+                   Style="{DynamicResource LabelLogoStyle}"/>
+
+            <Label BorderBrush="White"
+                   BorderThickness="2"
+                   Margin="228,58,228,10" 
+                   Grid.ColumnSpan="2"/>
+
+            <Button x:Name="SaveBtn"
+                    Style="{DynamicResource MaterialDesignFlatButton}"
+                    Content="Добавить ячейку"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Click="SaveBtn_Click" 
+                    Grid.ColumnSpan="2"
+                    Height="50"
+                    Margin="218,35,218,35" 
+                    Grid.Row="7"
+                    Foreground="White"
+                    BorderBrush="White"
+                    BorderThickness="2"/>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Border>
 </Page>

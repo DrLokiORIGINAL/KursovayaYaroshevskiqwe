@@ -30,20 +30,27 @@
             <Border VerticalAlignment="Top"
                     Height="55"
                     Background="Transparent"
-                    MouseDown="Border_MouseDown">
+                    MouseDown="Border_MouseDown"/>
 
-                <Image  x:Name="Close"
+            <Image  x:Name="Close"
                     Style="{DynamicResource imgClose}"
                 Source="/ResourceFolder/ImageFolder/Close.png" 
                     Margin="0,20,20,0"
                     MouseLeftButtonDown="Close_MouseLeftButtonDown" Width="30"/>
 
-            </Border>
-
             <Label Style="{StaticResource LabelLogoStyle}"
                    Content="Меню сотрудника Павелецкая" 
                    Margin="450,0,250,730"
                    BorderBrush="Transparent"/>
+
+            <Label Style="{DynamicResource LabelNormalStyle}"
+                           Content="{Binding ElementName=MainFrame,
+                        Path=Content.Title}" 
+                   Margin="264,161,64,91"/>
+
+            <Frame Name="MaiFrame" 
+                   Margin="264,161,64,91"
+                           NavigationUIVisibility="Hidden"/>
 
             <Button x:Name="ListStaffBtn"
                     Style="{StaticResource MaterialDesignFlatButton}" 

@@ -14,7 +14,124 @@
       MinWidth="874"
       Title="AddLogistSPage">
 
-    <Grid>
-        
-    </Grid>
+    <Border>
+        <Grid>
+            <Label Content="Добавление сессии" 
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   BorderBrush="Transparent"
+                   Style="{DynamicResource LabelLogoStyle}"/>
+
+            <Label BorderBrush="White"
+                   BorderThickness="2"
+                   Margin="228,58,228,10" 
+                   Grid.ColumnSpan="2"/>
+
+            <TextBox x:Name="NameTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Hint="Введите название"
+                     Foreground="White"
+                     FontSize="15"
+                     FontFamily="Cascadia Mono SemiLight"
+                     Grid.Row="1"
+                     Grid.Column="0"
+                     VerticalAlignment="Center"
+                         Margin="78,0,79,0"
+                                     BorderBrush="White"
+                                     BorderThickness="0 0 0 2"
+                     Height="30"
+                     Text="{Binding NameSessionSmolenskaya}"/>
+
+            <TextBox x:Name="ARTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Hint="Введите возрастное ограничение"
+                     Foreground="White"
+                     FontSize="15"
+                     FontFamily="Cascadia Mono SemiLight"
+                     Grid.Row="2"
+                     Grid.Column="0"
+                     VerticalAlignment="Center"
+                         Margin="78,0,79,0"
+                                     BorderBrush="White" 
+                                     BorderThickness="0 0 0 2"
+                     Text="{Binding ARSeissionSmolenskaya}" Height="30"/>
+
+            <TextBox x:Name="TimeTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Hint="Введите время сеанса"
+                     Foreground="White"
+                     FontSize="15"
+                     FontFamily="Cascadia Mono SemiLight"
+                     Grid.Row="3"
+                     Grid.Column="0"
+                     VerticalAlignment="Center"
+                         Margin="78,0,79,0"
+                                     BorderBrush="White" 
+                                     BorderThickness="0 0 0 2"
+                     Text="{Binding TimeSessionSmolenskaya}" Height="30"/>
+
+            <Image x:Name="PhotoIm"
+               Grid.Column="3"
+               Grid.Row="1"
+               Grid.RowSpan="4"
+               Stretch="Fill"
+               Margin="10"/>
+
+            <Button x:Name="LoadIm" Content="Загрузить фото"
+                Grid.Column="1" Grid.Row="5"
+                Click="LoadIm_Click"
+                    Style="{DynamicResource MaterialDesignFlatButton}"
+                    Height="50"
+                    Foreground="White"
+                    BorderBrush="White"
+                    BorderThickness="2" Margin="10,15,10,15"/>
+
+            <DatePicker x:Name="DateDP"
+                        Style="{DynamicResource MaterialDesignDatePicker}"
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Margin="78,0,79,0"
+                        materialDesign:HintAssist.Hint="Выберите дату"
+                        Foreground="#828282"
+                        BorderBrush="White"
+                        BorderThickness="2"
+                        FontFamily="Cascadia Code Bold"
+                        FontSize="15"/>
+
+            <Button x:Name="SaveBtn"
+                    Style="{DynamicResource MaterialDesignFlatButton}"
+                    Content="Добавить сессию"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Click="SaveBtn_Click " 
+                    Grid.ColumnSpan="2"
+                    Height="50"
+                    Margin="218,15,218,15" 
+                    Grid.Row="6"
+                    Foreground="White"
+                    BorderBrush="White"
+                    BorderThickness="2"/>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Border>
 </Page>

@@ -14,7 +14,114 @@
       MinWidth="874"
       Title="AddManagerSPage">
 
-    <Grid>
-        
-    </Grid>
+    <Border>
+        <Grid>
+            <Label Content="Добавление сотрудника" 
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   BorderBrush="Transparent"
+                   Style="{DynamicResource LabelLogoStyle}"/>
+
+            <Label BorderBrush="White"
+                   BorderThickness="2"
+                   Margin="228,58,228,10" 
+                   Grid.ColumnSpan="2"/>
+
+            <TextBox x:Name="FLMTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Hint="Введите ФИО сотрудника"
+                     Foreground="White"
+                     FontSize="15"
+                     FontFamily="Cascadia Mono SemiLight"
+                     Grid.Row="1"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="2"
+                     VerticalAlignment="Center"
+                         Margin="150,0,150,0"
+                                     BorderBrush="White" 
+                                     BorderThickness="0 0 0 2"
+                     Height="30"/>
+
+            <TextBox x:Name="NumberTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Hint="Введите номер телефона помощника"
+                     Foreground="White"
+                     FontSize="15"
+                     FontFamily="Cascadia Mono SemiLight"
+                     Grid.Row="2"
+                     Grid.Column="0"
+                     VerticalAlignment="Center"
+                         Margin="150,0,150,0"
+                                     BorderBrush="White"
+                                     BorderThickness="0 0 0 2"
+                     Height="30" 
+                     Grid.ColumnSpan="2"/>
+
+            <TextBox x:Name="EmailTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Hint="Введите почту помощника"
+                     Foreground="White"
+                     FontSize="15"
+                     FontFamily="Cascadia Mono SemiLight"
+                     Grid.Row="3"
+                     Grid.Column="0"
+                     VerticalAlignment="Center"
+                         Margin="150,0,150,0"
+                                     BorderBrush="White"
+                                     BorderThickness="0 0 0 2"
+                     Height="30" 
+                     Grid.ColumnSpan="2"/>
+
+            <TextBox x:Name="PositionTb"
+                     Style="{DynamicResource MaterialDesignTextBox}"
+                     materialDesign:HintAssist.Foreground="White"
+                     materialDesign:HintAssist.FontFamily="Cascadia Mono SemiLight"
+                     materialDesign:HintAssist.Hint="Введите должность помощника"
+                     Foreground="White"
+                     FontSize="15"
+                     FontFamily="Cascadia Mono SemiLight"
+                     Grid.Row="4"
+                     Grid.Column="0"
+                     VerticalAlignment="Center"
+                         Margin="150,0,150,0"
+                                     BorderBrush="White"
+                                     BorderThickness="0 0 0 2"
+                     Height="30" 
+                     Grid.ColumnSpan="2"/>
+
+            <Button x:Name="SaveBtn"
+                    Style="{DynamicResource MaterialDesignFlatButton}"
+                    Content="Добавить сотрудника"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Click="SaveBtn_Click" 
+                    Grid.ColumnSpan="2"
+                    Height="50"
+                    Margin="218,49,218,61" 
+                    Grid.Row="5"
+                    Foreground="White"
+                    BorderBrush="White"
+                    BorderThickness="2"/>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Border>
 </Page>

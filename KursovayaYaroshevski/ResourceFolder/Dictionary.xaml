@@ -110,4 +110,12 @@
         <Setter Property="Foreground" Value="White"/>
     </Style>
 
+    <Style x:Key="StyleTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Cascadia Code SemiLight"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="TextAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
 </ResourceDictionary>

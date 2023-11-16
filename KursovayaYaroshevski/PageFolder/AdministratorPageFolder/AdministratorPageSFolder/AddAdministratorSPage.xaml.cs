@@ -1,4 +1,7 @@
-﻿using System;
+﻿using KursovayaYaroshevski.ClassFolder;
+using KursovayaYaroshevski.DataFolder;
+using KursovayaYaroshevski.PageFolder.AdministratorPageFolder.AdministratorPageNFolder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,35 @@ namespace KursovayaYaroshevski.PageFolder.AdministratorPageFolder.AdministratorP
         public AddAdministratorSPage()
         {
             InitializeComponent();
+            StaffCb.ItemsSource = DBEntities.GetContext()
+               .StaffNovokuznetskaya.ToList();
+            SessionCb.ItemsSource = DBEntities.GetContext()
+               .SessionNovokuznetskaya.ToList();
+            HelperCb.ItemsSource = DBEntities.GetContext()
+               .HelperNovokuznetskaya.ToList();
+            CleaningCb.ItemsSource = DBEntities.GetContext()
+                .Cleaning.ToList();
+        }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DBEntities.GetContext().Smolenskaya.Add(new Smolenskaya()
+            {
+                IdStaffSmolenskaya = Int32.Parse(StaffCb.SelectedValue.ToString()),
+                IdHelperSmolenskaya = Int32.Parse(HelperCb.SelectedValue.ToString()),
+                IdSessionSmolenskaya = Int32.Parse(SessionCb.SelectedValue.ToString()),
+                NumberOfNachosSmolenskaya = Int32.Parse(NachosTb.Text),
+                NumberOfCrispsSmolenskaya = Int32.Parse(CrispsTb.Text),
+                AmountOfColaSmolenskaya = Int32.Parse(ColaTb.Text),
+                AmountOfFantaSmolenskaya = Int32.Parse(FantaTb.Text),
+                AmountOfSweetPopcornSmolenskaya = Int32.Parse(SweetTb.Text),
+                AmountOfSaltedPopcornSmolenskaya = Int32.Parse(SaltTb.Text),
+                AmountOfCaramelPopcornSmolenskaya = Int32.Parse(CaramelTb.Text),
+                IdCleaning = Int32.Parse(CleaningCb.SelectedValue.ToString()),
+            });
+            DBEntities.GetContext().SaveChanges();
+            MBClass.InformationMB("Успешно");
+            NavigationService.Navigate(new ListAdministratorSPage());
         }
     }
 }

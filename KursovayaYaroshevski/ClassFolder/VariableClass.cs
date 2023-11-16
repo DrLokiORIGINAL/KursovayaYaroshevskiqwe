@@ -8,5 +8,6 @@ namespace KursovayaYaroshevski.ClassFolder
 {
     internal class VariableClass
     {
+        public static string IdLogist { get; set; }
     }
 }

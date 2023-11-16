@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="IdCleaning" />
           </Key>
-          <Property Name="IdCleaning" Type="int" Nullable="false" />
+          <Property Name="IdCleaning" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NameCleaning" Type="nvarchar" MaxLength="15" Nullable="false" />
         </EntityType>
         <EntityType Name="HelperNovokuznetskaya">
@@ -189,7 +189,7 @@
           <Property Name="PasswordUser" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IdRole" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Novokuznetskaya_Cleaning">
+        <Association Name="FK_Novokuznetskaya_Cleaning1">
           <End Role="Cleaning" Type="Self.Cleaning" Multiplicity="1" />
           <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
           <ReferentialConstraint>
@@ -201,7 +201,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Novokuznetskaya_HelperNovokuznetskaya">
+        <Association Name="FK_Novokuznetskaya_HelperNovokuznetskaya1">
           <End Role="HelperNovokuznetskaya" Type="Self.HelperNovokuznetskaya" Multiplicity="1" />
           <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
           <ReferentialConstraint>
@@ -209,11 +209,11 @@
               <PropertyRef Name="IdHelperNovokuznetskaya" />
             </Principal>
             <Dependent Role="Novokuznetskaya">
-              <PropertyRef Name="IdSessionNovokuznetskaya" />
+              <PropertyRef Name="IdHelperNovokuznetskaya" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Novokuznetskaya_SessionNovokuznetskaya">
+        <Association Name="FK_Novokuznetskaya_SessionNovokuznetskaya1">
           <End Role="SessionNovokuznetskaya" Type="Self.SessionNovokuznetskaya" Multiplicity="1" />
           <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
           <ReferentialConstraint>
@@ -221,11 +221,11 @@
               <PropertyRef Name="IdSessionNovokuznetskaya" />
             </Principal>
             <Dependent Role="Novokuznetskaya">
-              <PropertyRef Name="IdHelperNovokuznetskaya" />
+              <PropertyRef Name="IdSessionNovokuznetskaya" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Novokuznetskaya_StaffNovokuznetskaya">
+        <Association Name="FK_Novokuznetskaya_StaffNovokuznetskaya1">
           <End Role="StaffNovokuznetskaya" Type="Self.StaffNovokuznetskaya" Multiplicity="1" />
           <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
           <ReferentialConstraint>
@@ -394,19 +394,19 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TitleStaff" EntityType="Self.TitleStaff" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Novokuznetskaya_Cleaning" Association="Self.FK_Novokuznetskaya_Cleaning">
+          <AssociationSet Name="FK_Novokuznetskaya_Cleaning1" Association="Self.FK_Novokuznetskaya_Cleaning1">
             <End Role="Cleaning" EntitySet="Cleaning" />
             <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
           </AssociationSet>
-          <AssociationSet Name="FK_Novokuznetskaya_HelperNovokuznetskaya" Association="Self.FK_Novokuznetskaya_HelperNovokuznetskaya">
+          <AssociationSet Name="FK_Novokuznetskaya_HelperNovokuznetskaya1" Association="Self.FK_Novokuznetskaya_HelperNovokuznetskaya1">
             <End Role="HelperNovokuznetskaya" EntitySet="HelperNovokuznetskaya" />
             <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
           </AssociationSet>
-          <AssociationSet Name="FK_Novokuznetskaya_SessionNovokuznetskaya" Association="Self.FK_Novokuznetskaya_SessionNovokuznetskaya">
+          <AssociationSet Name="FK_Novokuznetskaya_SessionNovokuznetskaya1" Association="Self.FK_Novokuznetskaya_SessionNovokuznetskaya1">
             <End Role="SessionNovokuznetskaya" EntitySet="SessionNovokuznetskaya" />
             <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
           </AssociationSet>
-          <AssociationSet Name="FK_Novokuznetskaya_StaffNovokuznetskaya" Association="Self.FK_Novokuznetskaya_StaffNovokuznetskaya">
+          <AssociationSet Name="FK_Novokuznetskaya_StaffNovokuznetskaya1" Association="Self.FK_Novokuznetskaya_StaffNovokuznetskaya1">
             <End Role="StaffNovokuznetskaya" EntitySet="StaffNovokuznetskaya" />
             <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
           </AssociationSet>
@@ -456,9 +456,9 @@
           <Key>
             <PropertyRef Name="IdCleaning" />
           </Key>
-          <Property Name="IdCleaning" Type="Int32" Nullable="false" />
+          <Property Name="IdCleaning" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NameCleaning" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_Cleaning" FromRole="Cleaning" ToRole="Novokuznetskaya" />
+          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_Cleaning1" FromRole="Cleaning" ToRole="Novokuznetskaya" />
           <NavigationProperty Name="Paveletskaya" Relationship="Self.FK_Paveletskaya_Cleaning" FromRole="Cleaning" ToRole="Paveletskaya" />
           <NavigationProperty Name="Smolenskaya" Relationship="Self.FK_Smolenskaya_Cleaning" FromRole="Cleaning" ToRole="Smolenskaya" />
         </EntityType>
@@ -471,7 +471,7 @@
           <Property Name="NumberPhoneHelperNovokuznetskaya" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="EmailHelperNovokuznetskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PositionHelperNovokuznetskaya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_HelperNovokuznetskaya" FromRole="HelperNovokuznetskaya" ToRole="Novokuznetskaya" />
+          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_HelperNovokuznetskaya1" FromRole="HelperNovokuznetskaya" ToRole="Novokuznetskaya" />
         </EntityType>
         <EntityType Name="HelperPaveletskaya">
           <Key>
@@ -511,10 +511,10 @@
           <Property Name="AmountOfSaltedPopcornNovokuznetskaya" Type="Int32" Nullable="false" />
           <Property Name="AmountOfCaramelPopcornNovokuznetskaya" Type="Int32" Nullable="false" />
           <Property Name="IdCleaning" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Cleaning" Relationship="Self.FK_Novokuznetskaya_Cleaning" FromRole="Novokuznetskaya" ToRole="Cleaning" />
-          <NavigationProperty Name="HelperNovokuznetskaya" Relationship="Self.FK_Novokuznetskaya_HelperNovokuznetskaya" FromRole="Novokuznetskaya" ToRole="HelperNovokuznetskaya" />
-          <NavigationProperty Name="SessionNovokuznetskaya" Relationship="Self.FK_Novokuznetskaya_SessionNovokuznetskaya" FromRole="Novokuznetskaya" ToRole="SessionNovokuznetskaya" />
-          <NavigationProperty Name="StaffNovokuznetskaya" Relationship="Self.FK_Novokuznetskaya_StaffNovokuznetskaya" FromRole="Novokuznetskaya" ToRole="StaffNovokuznetskaya" />
+          <NavigationProperty Name="Cleaning" Relationship="Self.FK_Novokuznetskaya_Cleaning1" FromRole="Novokuznetskaya" ToRole="Cleaning" />
+          <NavigationProperty Name="HelperNovokuznetskaya" Relationship="Self.FK_Novokuznetskaya_HelperNovokuznetskaya1" FromRole="Novokuznetskaya" ToRole="HelperNovokuznetskaya" />
+          <NavigationProperty Name="SessionNovokuznetskaya" Relationship="Self.FK_Novokuznetskaya_SessionNovokuznetskaya1" FromRole="Novokuznetskaya" ToRole="SessionNovokuznetskaya" />
+          <NavigationProperty Name="StaffNovokuznetskaya" Relationship="Self.FK_Novokuznetskaya_StaffNovokuznetskaya1" FromRole="Novokuznetskaya" ToRole="StaffNovokuznetskaya" />
         </EntityType>
         <EntityType Name="Paveletskaya">
           <Key>
@@ -555,7 +555,7 @@
           <Property Name="TimeSessionNovokuznetskaya" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ImageSessionNovokuznetskaya" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <Property Name="DateSessionNovokuznetskaya" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_SessionNovokuznetskaya" FromRole="SessionNovokuznetskaya" ToRole="Novokuznetskaya" />
+          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_SessionNovokuznetskaya1" FromRole="SessionNovokuznetskaya" ToRole="Novokuznetskaya" />
         </EntityType>
         <EntityType Name="SessionPaveletskaya">
           <Key>
@@ -611,7 +611,7 @@
           <Property Name="NumberPhoneStaffNovokuznetskaya" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="EmailStaffNovokuznetskaya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PositionStaffNovokuznetskaya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_StaffNovokuznetskaya" FromRole="StaffNovokuznetskaya" ToRole="Novokuznetskaya" />
+          <NavigationProperty Name="Novokuznetskaya" Relationship="Self.FK_Novokuznetskaya_StaffNovokuznetskaya1" FromRole="StaffNovokuznetskaya" ToRole="Novokuznetskaya" />
         </EntityType>
         <EntityType Name="StaffPaveletskaya">
           <Key>
@@ -662,7 +662,7 @@
           <Property Name="IdRole" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
         </EntityType>
-        <Association Name="FK_Novokuznetskaya_Cleaning">
+        <Association Name="FK_Novokuznetskaya_Cleaning1">
           <End Role="Cleaning" Type="Self.Cleaning" Multiplicity="1" />
           <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
           <ReferentialConstraint>
@@ -698,7 +698,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Novokuznetskaya_HelperNovokuznetskaya">
+        <Association Name="FK_Novokuznetskaya_HelperNovokuznetskaya1">
           <End Role="HelperNovokuznetskaya" Type="Self.HelperNovokuznetskaya" Multiplicity="1" />
           <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
           <ReferentialConstraint>
@@ -706,7 +706,7 @@
               <PropertyRef Name="IdHelperNovokuznetskaya" />
             </Principal>
             <Dependent Role="Novokuznetskaya">
-              <PropertyRef Name="IdSessionNovokuznetskaya" />
+              <PropertyRef Name="IdHelperNovokuznetskaya" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -734,7 +734,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Novokuznetskaya_SessionNovokuznetskaya">
+        <Association Name="FK_Novokuznetskaya_SessionNovokuznetskaya1">
           <End Role="SessionNovokuznetskaya" Type="Self.SessionNovokuznetskaya" Multiplicity="1" />
           <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
           <ReferentialConstraint>
@@ -742,11 +742,11 @@
               <PropertyRef Name="IdSessionNovokuznetskaya" />
             </Principal>
             <Dependent Role="Novokuznetskaya">
-              <PropertyRef Name="IdHelperNovokuznetskaya" />
+              <PropertyRef Name="IdSessionNovokuznetskaya" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Novokuznetskaya_StaffNovokuznetskaya">
+        <Association Name="FK_Novokuznetskaya_StaffNovokuznetskaya1">
           <End Role="StaffNovokuznetskaya" Type="Self.StaffNovokuznetskaya" Multiplicity="1" />
           <End Role="Novokuznetskaya" Type="Self.Novokuznetskaya" Multiplicity="*" />
           <ReferentialConstraint>
@@ -836,7 +836,7 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="TitleStaff" EntityType="Self.TitleStaff" />
           <EntitySet Name="User" EntityType="Self.User" />
-          <AssociationSet Name="FK_Novokuznetskaya_Cleaning" Association="Self.FK_Novokuznetskaya_Cleaning">
+          <AssociationSet Name="FK_Novokuznetskaya_Cleaning1" Association="Self.FK_Novokuznetskaya_Cleaning1">
             <End Role="Cleaning" EntitySet="Cleaning" />
             <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
           </AssociationSet>
@@ -848,7 +848,7 @@
             <End Role="Cleaning" EntitySet="Cleaning" />
             <End Role="Smolenskaya" EntitySet="Smolenskaya" />
           </AssociationSet>
-          <AssociationSet Name="FK_Novokuznetskaya_HelperNovokuznetskaya" Association="Self.FK_Novokuznetskaya_HelperNovokuznetskaya">
+          <AssociationSet Name="FK_Novokuznetskaya_HelperNovokuznetskaya1" Association="Self.FK_Novokuznetskaya_HelperNovokuznetskaya1">
             <End Role="HelperNovokuznetskaya" EntitySet="HelperNovokuznetskaya" />
             <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
           </AssociationSet>
@@ -860,11 +860,11 @@
             <End Role="HelperSmolenskaya" EntitySet="HelperSmolenskaya" />
             <End Role="Smolenskaya" EntitySet="Smolenskaya" />
           </AssociationSet>
-          <AssociationSet Name="FK_Novokuznetskaya_SessionNovokuznetskaya" Association="Self.FK_Novokuznetskaya_SessionNovokuznetskaya">
+          <AssociationSet Name="FK_Novokuznetskaya_SessionNovokuznetskaya1" Association="Self.FK_Novokuznetskaya_SessionNovokuznetskaya1">
             <End Role="SessionNovokuznetskaya" EntitySet="SessionNovokuznetskaya" />
             <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
           </AssociationSet>
-          <AssociationSet Name="FK_Novokuznetskaya_StaffNovokuznetskaya" Association="Self.FK_Novokuznetskaya_StaffNovokuznetskaya">
+          <AssociationSet Name="FK_Novokuznetskaya_StaffNovokuznetskaya1" Association="Self.FK_Novokuznetskaya_StaffNovokuznetskaya1">
             <End Role="StaffNovokuznetskaya" EntitySet="StaffNovokuznetskaya" />
             <End Role="Novokuznetskaya" EntitySet="Novokuznetskaya" />
           </AssociationSet>

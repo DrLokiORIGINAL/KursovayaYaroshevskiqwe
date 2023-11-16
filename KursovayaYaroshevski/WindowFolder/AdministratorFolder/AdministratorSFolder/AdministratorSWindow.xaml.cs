@@ -1,4 +1,6 @@
 ﻿using KursovayaYaroshevski.ClassFolder;
+using KursovayaYaroshevski.PageFolder.AdmFolder;
+using KursovayaYaroshevski.PageFolder.AdministratorPageFolder.AdministratorPageSFolder;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,11 +25,13 @@ namespace KursovayaYaroshevski.WindowFolder.AdministratorFolder.AdministratorSFo
         public AdministratorSWindow()
         {
             InitializeComponent();
+            MaiFrame.Navigate(new PageFolder.AdministratorPageFolder.AdministratorPageSFolder.ListAdministratorSPage());
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
 
         private void Close_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -41,12 +45,12 @@ namespace KursovayaYaroshevski.WindowFolder.AdministratorFolder.AdministratorSFo
 
         private void ListAdministratorBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MaiFrame.Navigate(new ListAdministratorSPage());
         }
 
         private void AddBtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            MaiFrame.Navigate(new AddAdministratorSPage());
         }
     }
 }

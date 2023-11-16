@@ -109,7 +109,7 @@
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="№ п/п" 
-                                    Binding="{Binding IdUser}"
+                                    Binding="{Binding IdNovokuznetskaya}"
                                     Width="auto"
                                     Foreground="White"/>
                 <DataGridTextColumn Header="Сотрудник" 

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using KursovayaYaroshevski.ClassFolder;
+using KursovayaYaroshevski.DataFolder;
+using KursovayaYaroshevski.PageFolder.AdministratorPageFolder.AdministratorPagePFolder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +23,54 @@ namespace KursovayaYaroshevski.PageFolder.AdministratorPageFolder.AdministratorP
     /// </summary>
     public partial class EditAdministratorSPage : Page
     {
-        public EditAdministratorSPage()
+        Smolenskaya smolenskaya = new Smolenskaya();
+        public EditAdministratorSPage(Smolenskaya smolenskaya)
         {
             InitializeComponent();
+
+            DataContext = smolenskaya;
+
+            this.smolenskaya.IdSmolenskaya = smolenskaya.IdSmolenskaya;
+
+            StaffCb.ItemsSource = DBEntities.GetContext()
+               .StaffSmolenskaya.ToList();
+            SessionCb.ItemsSource = DBEntities.GetContext()
+               .SessionSmolenskaya.ToList();
+            HelperCb.ItemsSource = DBEntities.GetContext()
+               .HelperSmolenskaya.ToList();
+            CleaningCb.ItemsSource = DBEntities.GetContext()
+                .Cleaning.ToList();
+        }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                smolenskaya = DBEntities.GetContext().Smolenskaya
+                        .FirstOrDefault(u => u.IdSmolenskaya == smolenskaya.IdSmolenskaya);
+                smolenskaya.IdStaffSmolenskaya = Int32.Parse(
+                    StaffCb.SelectedValue.ToString());
+                smolenskaya.IdHelperSmolenskaya = Int32.Parse(
+                    HelperCb.SelectedValue.ToString());
+                smolenskaya.IdSessionSmolenskaya = Int32.Parse(
+                    SessionCb.SelectedValue.ToString());
+                smolenskaya.NumberOfNachosSmolenskaya = Int32.Parse(NachosTb.Text);
+                smolenskaya.NumberOfCrispsSmolenskaya = Int32.Parse(CrispsTb.Text);
+                smolenskaya.AmountOfColaSmolenskaya = Int32.Parse(ColaTb.Text);
+                smolenskaya.AmountOfFantaSmolenskaya = Int32.Parse(FantaTb.Text);
+                smolenskaya.AmountOfSweetPopcornSmolenskaya = Int32.Parse(SweetTb.Text);
+                smolenskaya.AmountOfSaltedPopcornSmolenskaya = Int32.Parse(SaltTb.Text);
+                smolenskaya.AmountOfCaramelPopcornSmolenskaya = Int32.Parse(CaramelTb.Text);
+                smolenskaya.IdCleaning = Int32.Parse(
+                    CleaningCb.SelectedValue.ToString());
+                DBEntities.GetContext().SaveChanges();
+                MBClass.InformationMB("Данные успешно отредактированы");
+                NavigationService.Navigate(new ListAdministratorSPage());
+            }
+            catch (Exception ex)
+            {
+                MBClass.ErrorMB(ex);
+            }
         }
     }
 }

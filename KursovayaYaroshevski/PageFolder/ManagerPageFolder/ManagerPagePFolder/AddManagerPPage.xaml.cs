@@ -1,4 +1,7 @@
-﻿using System;
+﻿using KursovayaYaroshevski.ClassFolder;
+using KursovayaYaroshevski.DataFolder;
+using KursovayaYaroshevski.PageFolder.ManagerPageFolder.ManagerPageNFolder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,20 @@ namespace KursovayaYaroshevski.PageFolder.ManagerPageFolder.ManagerPagePFolder
         public AddManagerPPage()
         {
             InitializeComponent();
+        }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DBEntities.GetContext().StaffPaveletskaya.Add(new StaffPaveletskaya()
+            {
+                FLMStaffPaveletskaya = FLMTb.Text,
+                NumberPhoneStaffPaveletskaya = NumberTb.Text,
+                EmailStaffPaveletskaya = EmailTb.Text,
+                PositionStaffPaveletskaya = PositionTb.Text,
+            });
+            DBEntities.GetContext().SaveChanges();
+            MBClass.InformationMB("Успешно");
+            NavigationService.Navigate(new ListManagerPPage());
         }
     }
 }

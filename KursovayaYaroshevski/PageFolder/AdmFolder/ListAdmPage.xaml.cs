@@ -20,6 +20,7 @@ namespace KursovayaYaroshevski.PageFolder.AdmFolder
     /// <summary>
     /// Логика взаимодействия для ListAdmPage.xaml
     /// </summary>
+    /// asd
     public partial class ListAdmPage : Page
     {
         public ListAdmPage()

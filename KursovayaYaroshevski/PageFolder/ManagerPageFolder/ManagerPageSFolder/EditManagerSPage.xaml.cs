@@ -1,4 +1,7 @@
-﻿using System;
+﻿using KursovayaYaroshevski.ClassFolder;
+using KursovayaYaroshevski.DataFolder;
+using KursovayaYaroshevski.PageFolder.ManagerPageFolder.ManagerPagePFolder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +21,37 @@ namespace KursovayaYaroshevski.PageFolder.ManagerPageFolder.ManagerPageSFolder
     /// <summary>
     /// Логика взаимодействия для EditManagerSPage.xaml
     /// </summary>
+    /// Smolenskaya
     public partial class EditManagerSPage : Page
     {
-        public EditManagerSPage()
+        StaffSmolenskaya staffSmolenskaya = new StaffSmolenskaya();
+        public EditManagerSPage(StaffSmolenskaya staffSmolenskaya)
         {
             InitializeComponent();
+            DataContext = staffSmolenskaya;
+
+            this.staffSmolenskaya.IdStaffSmolenskaya = staffSmolenskaya.IdStaffSmolenskaya;
+        }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                staffSmolenskaya = DBEntities.GetContext().StaffSmolenskaya
+                        .FirstOrDefault(u => u.IdStaffSmolenskaya == staffSmolenskaya.IdStaffSmolenskaya);
+                staffSmolenskaya.FLMStaffSmolenskaya = FLMTb.Text;
+                staffSmolenskaya.NumberPhoneStaffSmolenskaya = NumberTb.Text;
+                staffSmolenskaya.EmailStaffSmolenskaya = EmailTb.Text;
+                staffSmolenskaya.PositionStaffSmolenskaya = PositionTb.Text;
+                DBEntities.GetContext().SaveChanges();
+                MBClass.InformationMB("Данные успешно отредактированы");
+                NavigationService.Navigate(new ListManagerSPage());
+            }
+            catch (Exception ex)
+            {
+                MBClass.ErrorMB(ex);
+            }
+
         }
     }
 }
